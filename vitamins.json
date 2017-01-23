@@ -1,0 +1,1569 @@
+//VITAMIN A - complete
+
+var vitANodes = [
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"C", "size":100},
+  {"atom":"O", "size":200},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"H", "size":10},
+  {"atom":"C50", "size":100}
+];
+
+var vitALinks = [
+  {"source":0, "target":1, "bond":1},
+  {"source":1, "target":2, "bond":2},
+  {"source":2, "target":3, "bond":1},
+  {"source":3, "target":4, "bond":1},
+  {"source":3, "target":32, "bond":1},
+  {"source":3, "target":33, "bond":1},
+  {"source":4, "target":5, "bond":1},
+  {"source":4, "target":34, "bond":1},
+  {"source":4, "target":35, "bond":1},
+  {"source":5, "target":0, "bond":1},
+  {"source":5, "target":36, "bond":1},
+  {"source":5, "target":37, "bond":1},
+  {"source":1, "target":6, "bond":1},
+  {"source":6, "target":38, "bond":1},
+  {"source":6, "target":7, "bond":2},
+  {"source":7, "target":39, "bond":1},
+  {"source":7, "target":8, "bond":1},
+  {"source":8, "target":9, "bond":2},
+  {"source":9, "target":40, "bond":1},
+  {"source":9, "target":10, "bond":1},
+  {"source":10, "target":41, "bond":1},
+  {"source":10, "target":11, "bond":2},
+  {"source":11, "target":42, "bond":1},
+  {"source":11, "target":12, "bond":1},
+  {"source":12, "target":13, "bond":2},
+  {"source":12, "target":50, "bond":1},
+  {"source":13, "target":46, "bond":1},
+  {"source":13, "target":14, "bond":1},
+  {"source":14, "target":47, "bond":1},
+  {"source":14, "target":48, "bond":1},
+  {"source":0, "target":15, "bond":1},
+  {"source":15, "target":20, "bond":1},
+  {"source":15, "target":21, "bond":1},
+  {"source":15, "target":22, "bond":1},
+  {"source":0, "target":16, "bond":1},
+  {"source":16, "target":23, "bond":1},
+  {"source":16, "target":24, "bond":1},
+  {"source":16, "target":25, "bond":1},
+  {"source":2, "target":17, "bond":1},
+  {"source":17, "target":26, "bond":1},
+  {"source":17, "target":27, "bond":1},
+  {"source":17, "target":28, "bond":1},
+  {"source":8, "target":18, "bond":1},
+  {"source":18, "target":29, "bond":1},
+  {"source":18, "target":30, "bond":1},
+  {"source":18, "target":31, "bond":1},
+  {"source":14, "target":19, "bond":1},
+  {"source":19, "target":49, "bond":1},
+  {"source":50, "target":43, "bond":1},
+  {"source":50, "target":44, "bond":1},
+  {"source":50, "target":45, "bond":1}
+];
+
+// VITAMIN B1 - Complete
+
+var vitB1Nodes = [
+  {"atom":"N", "size":140}, //N0
+  {"atom":"C", "size":120}, //C1
+  {"atom":"N", "size":140}, //N2
+  {"atom":"C", "size":120}, //C3
+  {"atom":"N", "size":140}, //N4
+  {"atom":"C", "size":120}, //C5
+  {"atom":"C", "size":120}, //C6
+  {"atom":"N", "size":140}, //N7
+  {"atom":"C", "size":120}, //C8
+  {"atom":"C", "size":120}, //C9
+  {"atom":"S", "size":320}, //S10
+  {"atom":"C", "size":120}, //C11
+  {"atom":"C", "size":120}, //C12
+  {"atom":"C", "size":120}, //C13
+  {"atom":"C", "size":120}, //C14
+  {"atom":"C", "size":120}, //C15
+  {"atom":"O", "size":160}, //O16
+  {"atom":"H", "size":20}, //H17
+  {"atom":"H", "size":20}, //H18
+  {"atom":"H", "size":20}, //H19
+  {"atom":"H", "size":20}, //H20
+  {"atom":"H", "size":20}, //H21
+  {"atom":"H", "size":20}, //H22
+  {"atom":"H", "size":20}, //H23
+  {"atom":"H", "size":20}, //H24
+  {"atom":"H", "size":20}, //H25
+  {"atom":"H", "size":20}, //H26
+  {"atom":"H", "size":20}, //H27
+  {"atom":"H", "size":20}, //H28
+  {"atom":"H", "size":20}, //H29
+  {"atom":"H", "size":20}, //H30
+  {"atom":"H", "size":20}, //H31
+  {"atom":"H", "size":20}, //H32
+  {"atom":"H", "size":20}  //H33
+];
+
+var vitB1links = [
+  {"source":0, "target":1, "bond":1},  //N0 - C1
+  {"source":0, "target":17, "bond":1}, //N0 - H17
+  {"source":0, "target":18, "bond":1}, //N0 - H18
+  {"source":1, "target":2, "bond":2},  //C1 - N2
+  {"source":2, "target":3, "bond":1},  //N2 - C3
+  {"source":3, "target":4, "bond":2},  //C3 - N4
+  {"source":3, "target":12, "bond":1},  //C3 - C12
+  {"source":12, "target":19, "bond":1}, //C12 - H19
+  {"source":12, "target":20, "bond":1}, //C12 - H20
+  {"source":12, "target":33, "bond":1}, //C12 - H33
+  {"source":4, "target":5, "bond":1},  //N4 - C5
+  {"source":5, "target":6, "bond":2},  //C5 - C6
+  {"source":5, "target":21, "bond":1}, //C5 - H21
+  {"source":6, "target":7, "bond":1},  //C6 - N7
+  {"source":6, "target":22, "bond":1}, //C5 - H22
+  {"source":6, "target":23, "bond":1}, //C5 - H23
+  {"source":7, "target":8, "bond":1},  //N7 - C8
+  {"source":8, "target":9, "bond":2},  //C8 - C9
+  {"source":8, "target":13, "bond":1}, //C8 - C13
+  {"source":13, "target":24, "bond":1}, //C13 - H24
+  {"source":13, "target":25, "bond":1}, //C13 - H25
+  {"source":13, "target":26, "bond":1}, //C13 - H26
+  {"source":9, "target":10, "bond":1},  //C9 - S10
+  {"source":9, "target":14, "bond":1},  //C9 - C14
+  {"source":14, "target":15, "bond":1}, //C14 - C15
+  {"source":14, "target":27, "bond":1}, //C14 - H27
+  {"source":14, "target":28, "bond":1}, //C14 - H28
+  {"source":15, "target":16, "bond":1}, //C15 - O16
+  {"source":15, "target":29, "bond":1}, //C15 - H29
+  {"source":15, "target":30, "bond":1}, //C15 - H30
+  {"source":16, "target":31, "bond":1}, //C15 - H31
+  {"source":10, "target":11, "bond":1}, //S10 - C11
+  {"source":11, "target":7, "bond":2},  //C11 - N7
+  {"source":11, "target":32, "bond":1}, //C11 - H32
+  {"source":1, "target":6, "bond":1}    //C11 - H32
+];
+
+// VITAMIN B2 - complete
+
+var vitB2Nodes = [
+   {"atom":"C", "size":120}, //C0
+   {"atom":"C", "size":120}, //C1
+   {"atom":"C", "size":120}, //C2
+   {"atom":"C", "size":120}, //C3
+   {"atom":"N", "size":140}, //N4
+   {"atom":"C", "size":120}, //C5
+   {"atom":"N", "size":140}, //N6
+   {"atom":"C", "size":120}, //C7
+   {"atom":"O", "size":160}, //O8
+   {"atom":"N", "size":140}, //N9
+   {"atom":"C", "size":120}, //C10
+   {"atom":"O", "size":160}, //O11
+   {"atom":"C", "size":120}, //C12
+   {"atom":"N", "size":140}, //N13
+   {"atom":"C", "size":120}, //C14
+   {"atom":"C", "size":120}, //C15
+   {"atom":"C", "size":120}, //C16
+   {"atom":"C", "size":120}, //C17
+   {"atom":"C", "size":120}, //C18
+   {"atom":"O", "size":160}, //O19
+   {"atom":"C", "size":120}, //C20
+   {"atom":"O", "size":160}, //O21
+   {"atom":"C", "size":120}, //C22
+   {"atom":"O", "size":160}, //O23
+   {"atom":"C", "size":120}, //C24
+   {"atom":"O", "size":160}, //O25
+   {"atom":"H", "size":20},  //H26
+   {"atom":"H", "size":20},  //H27
+   {"atom":"H", "size":20},  //H28
+   {"atom":"H", "size":20},  //H29
+   {"atom":"H", "size":20},  //H30
+   {"atom":"H", "size":20},  //H31
+   {"atom":"H", "size":20},  //H32
+   {"atom":"H", "size":20},  //H33
+   {"atom":"H", "size":20},  //H34
+   {"atom":"H", "size":20},  //H35
+   {"atom":"H", "size":20},  //H36
+   {"atom":"H", "size":20},  //H37
+   {"atom":"H", "size":20},  //H38
+   {"atom":"C", "size":120}, //C24
+   {"atom":"H", "size":20},  //H40
+   {"atom":"H", "size":20},  //H41
+   {"atom":"H", "size":20},  //H42
+   {"atom":"H", "size":20},  //H43
+   {"atom":"H", "size":20},  //H44
+   {"atom":"H", "size":20},  //H45
+   {"atom":"H", "size":20}  //H46
+
+];
+
+var vitB2Links = [
+  {"source":0, "target":1, "bond":1},   //C0 - C1
+  {"source":0, "target":26, "bond":1},   //C0 - H26
+  {"source":0, "target":27, "bond":1},   //C0 - H27
+  {"source":0, "target":28, "bond":1},   //C0 - H28
+  {"source":1, "target":2, "bond":2},    //C1 - C2
+  {"source":1, "target":16, "bond":1},   //C1 - C16
+  {"source":2, "target":3, "bond":1},    //C2 - C3
+  {"source":2, "target":37, "bond":1},    //C2 - H37
+  {"source":3, "target":4, "bond":1},    //C3 - N4
+  {"source":3, "target":14, "bond":2},   //C3 - C14
+  {"source":4, "target":5, "bond":1},    // N4-C5
+  {"source":4, "target":39, "bond":1},   // N4 - C39
+  {"source":5, "target":6, "bond":2},    // C5-N6
+  {"source":5, "target":12, "bond":1},   // C5-C12
+  {"source":6, "target":7, "bond":1},    // N6 - C7
+  {"source":7, "target":8, "bond":2},    // C7 - O8
+  {"source":7, "target":9, "bond":1},    // C7 - N9
+  {"source":9, "target":10, "bond":1},   // N9 - C10
+  {"source":9, "target":38, "bond":1},   // N9 - H38
+  {"source":10, "target":11, "bond":2},  // C10 - O11
+  {"source":10, "target":12, "bond":1},  // C10 - C12
+  {"source":12, "target":13, "bond":2},  // C12 - N13
+  {"source":13, "target":14, "bond":1},  // N13 - C14
+  {"source":14, "target":15, "bond":1},  // C14 - C15
+  {"source":15, "target":16, "bond":2},  // C15 - C16
+  {"source":15, "target":36, "bond":2},  // C15 - H36
+  {"source":16, "target":17, "bond":1},  // C16 - C17
+  {"source":17, "target":29, "bond":1},  // C17 - H29
+  {"source":17, "target":30, "bond":1},  // C17 - H30
+  {"source":17, "target":31, "bond":1},  // C17 - H31
+  {"source":18, "target":19, "bond":1},  // C18 - O19
+  {"source":19, "target":32, "bond":1},  // C19 - C32
+  {"source":18, "target":20, "bond":1},  // C18 - C20
+  {"source":18, "target":42, "bond":1},  // C18 - H42
+  {"source":20, "target":21, "bond":1},  // C20 - 021
+  {"source":21, "target":33, "bond":1},  // 021 - H33
+  {"source":20, "target":22, "bond":1},  // C20 - C22
+  {"source":20, "target":43, "bond":1},  // C20 - H43
+  {"source":22, "target":23, "bond":1},  // C22 - O23
+  {"source":22, "target":44, "bond":1},  // C22 - H44
+  {"source":23, "target":34, "bond":1},  // 023 - H34
+  {"source":22, "target":23, "bond":1},  // C22 - 023
+  {"source":22, "target":24, "bond":1},  // C22 - C24
+  {"source":24, "target":25, "bond":1},  // C24 - O25
+  {"source":24, "target":45, "bond":1},  // C24 - H45
+  {"source":24, "target":46, "bond":1},  // C24 - H46
+  {"source":25, "target":35, "bond":1},   // O25 - H35
+  {"source":39, "target":18, "bond":1},   // C39 - C18
+  {"source":39, "target":40, "bond":1},   // C39 - H40
+  {"source":39, "target":41, "bond":1}   // C39 - H41
+
+];
+
+// Vitamin B3 - Complete
+
+var vitB3Nodes = [
+   {"atom":"N", "size":140}, // N0
+   {"atom":"C", "size":120}, //C1
+   {"atom":"C", "size":120}, //C2
+   {"atom":"C", "size":120}, //C3
+   {"atom":"C", "size":120}, //C4
+   {"atom":"C", "size":120}, //C5
+   {"atom":"C", "size":120}, //C6
+   {"atom":"O", "size":160},  //O7
+   {"atom":"O", "size":160}, // O8
+   {"atom":"H", "size":20},  //H9
+   {"atom":"H", "size":20},  //H10
+   {"atom":"H", "size":20},  //H11
+   {"atom":"H", "size":20},  //H12
+   {"atom":"H", "size":20}  //H13
+];
+
+var vitB3Links = [
+    {"source":0, "target":1, "bond": 1},  //N0 - C1
+    {"source":1, "target":2, "bond": 2},  //C1 - C2
+    {"source":1, "target":11, "bond": 1},  //C1 - H11
+    {"source":2, "target":3, "bond": 1},  //C2 - C3
+    {"source":3, "target":4, "bond": 2},  //C3 - C4
+    {"source":3, "target":10, "bond": 1},  //C3 - H10
+    {"source":4, "target":5, "bond": 1},  //C4 - C5
+    {"source":4, "target":13, "bond": 1},  //C4 - H13
+    {"source":5, "target":0, "bond": 2},  //C5 - C0
+    {"source":5, "target":12, "bond": 1},  //C5 - H12
+    {"source":2, "target":6, "bond": 1},  //C2 - C6
+    {"source":6, "target":7, "bond": 2},  //C6 - 07
+    {"source":6, "target":8, "bond": 1},  //C6 - N8
+    {"source":8, "target":9, "bond": 1}  //N8 - H9
+];
+
+
+// Vitamin B5 - Complete
+
+var vitB5Nodes = [
+   {"atom":"H", "size":20},  //H0
+   {"atom":"O", "size":160}, //O1
+   {"atom":"C", "size":120}, //C2
+   {"atom":"C", "size":120}, //C3
+   {"atom":"C", "size":120}, //C4
+   {"atom":"H", "size":20},  //H5
+   {"atom":"H", "size":20},   //H6
+   {"atom":"H", "size":20},   //H7
+   {"atom":"C", "size":120}, //C8
+   {"atom":"H", "size":20},  //H9
+   {"atom":"H", "size":20},   //H10
+   {"atom":"H", "size":20},   //H11
+   {"atom":"C", "size":120}, //C12
+   {"atom":"H", "size":20},   //H13
+   {"atom":"O", "size":160}, //O14
+   {"atom":"H", "size":20},   //H15
+   {"atom":"C", "size":120}, //C16
+   {"atom":"O", "size":160},  //O17
+   {"atom":"N", "size":140},  //N18
+   {"atom":"H", "size":20},   //H19
+   {"atom":"C", "size":120}, //C20
+   {"atom":"C", "size":120}, //C21
+   {"atom":"C", "size":120}, //C22
+   {"atom":"O", "size":160},  //O23
+   {"atom":"O", "size":160},  //O24
+   {"atom":"H", "size":20},  //H25
+   {"atom":"H", "size":20},  //H26
+   {"atom":"H", "size":20},  //H27
+   {"atom":"H", "size":20},  //H28
+   {"atom":"H", "size":20},  //H29
+   {"atom":"H", "size":20},  //H30
+   {"atom":"H", "size":20}  //H31
+];
+
+var vitB5Links = [
+    {"source":0, "target":1, "bond": 1},  //H0 - O1
+    {"source":1, "target":2, "bond": 1},  //01 - C2
+    {"source":2, "target":3, "bond": 1},  //C2 - C3
+    {"source":2, "target":26, "bond": 1},  //C2 - H26
+    {"source":2, "target":27, "bond": 1},  //C2 - H27
+    {"source":3, "target":4, "bond": 1},  //C3 - C4
+    {"source":4, "target":5, "bond": 1},  //C4 - H5
+    {"source":4, "target":6, "bond": 1},  //C4 - H6
+    {"source":4, "target":7, "bond": 1},  //C4 - H7
+    {"source":3, "target":8, "bond": 1},  //C3 - C8
+    {"source":8, "target":9, "bond": 1},  //C8 - H9
+    {"source":8, "target":10, "bond": 1},  //C8 - H10
+    {"source":8, "target":11, "bond": 1},  //C8 - H11
+    {"source":8, "target":9, "bond": 1},  //N8 - H9
+    {"source":8, "target":10, "bond": 1},  //N8 - H10
+    {"source":8, "target":11, "bond": 1},  //N8 - H11
+    {"source":3, "target":12, "bond": 1},  //C3 - C12
+    {"source":12, "target":13, "bond": 1},  //C12 - H13
+    {"source":12, "target":14, "bond": 1},  //C12 - 014
+    {"source":14, "target":15, "bond": 1},  //O14 - H15
+    {"source":12, "target":16, "bond": 1},  //C12 - C16
+    {"source":16, "target":17, "bond": 2},  //C12 - O17
+    {"source":16, "target":18, "bond": 1},  //C17 - N18
+    {"source":18, "target":19, "bond": 1},  //N18 - H19
+    {"source":18, "target":20, "bond": 1},  //N18 - C20
+    {"source":20, "target":21, "bond": 1},  //C20 - C21
+    {"source":20, "target":28, "bond": 1},  //C20 - C28
+    {"source":20, "target":29, "bond": 1},  //C20 - C29
+    {"source":21, "target":22, "bond": 1},  //C21 - C22
+    {"source":21, "target":30, "bond": 1},  //C21 - C30
+    {"source":21, "target":31, "bond": 1},  //C21 - C31
+    {"source":22, "target":23, "bond": 2},  //C22 - C23
+    {"source":22, "target":24, "bond": 1},  //C22 - O24
+    {"source":24, "target":25, "bond": 1}  //O24 - H25
+];
+
+
+// Vitamin B6 - Complete
+
+var vitaminB6 Nodes = [
+    {"atom":"P", "size":300}, //P0
+    {"atom":"O", "size":160}, //O1
+    {"atom":"H", "size":20},  //H2
+    {"atom":"O", "size":160}, //O3
+    {"atom":"H", "size":20},  //H4
+    {"atom":"O", "size":160}, //O5
+    {"atom":"O", "size":160}, //O6
+    {"atom":"C", "size":120}, //C7
+    {"atom":"C", "size":120}, //C8
+    {"atom":"C", "size":120}, //C9
+    {"atom":"N", "size":140}, //N10
+    {"atom":"C", "size":120}, //C11
+    {"atom":"C", "size":120}, //C12
+    {"atom":"C", "size":120}, //C13
+    {"atom":"C", "size":120}, //C14
+    {"atom":"O", "size":160}, //O15
+    {"atom":"O", "size":160}, //O16
+    {"atom":"H", "size":20},  //H17
+    {"atom":"C", "size":120}, //C18
+    {"atom":"H", "size":20},  //H19
+    {"atom":"H", "size":20},  //H20
+    {"atom":"H", "size":20},  //H21
+    {"atom":"H", "size":20},  //H22
+    {"atom":"H", "size":20},  //H23
+    {"atom":"H", "size":20},  //H24
+    {"atom":"H", "size":20}  //H25
+];
+
+var vitaminB6Links = [
+    {"source":0, "target":1, "bond": 1},  //P0 - O1
+    {"source":1, "target":2, "bond": 1},  //01 - H2
+    {"source":0, "target":3, "bond": 1},  //P0 - O3
+    {"source":3, "target":4, "bond": 1},  //03 - H4
+    {"source":0, "target":5, "bond": 2},  //P0 - 05
+    {"source":0, "target":6, "bond": 1},  //P0 - 06
+    {"source":6, "target":7, "bond": 1},  //O6 - C7
+    {"source":7, "target":8, "bond": 1},  //C7 - C8
+    {"source":8, "target":9, "bond": 2},  //C8 - C9
+    {"source":8, "target":13, "bond": 2},  //C8 - C13
+    {"source":9, "target":10, "bond": 1},  //C9 - N10
+    {"source":10, "target":11, "bond": 2},  //N10 - C11
+    {"source":11, "target":12, "bond": 1},  //C11 - C12
+    {"source":12, "target":13, "bond": 2},  //C12 - C13
+    {"source":13, "target":14, "bond": 1},  //C13 - C14
+    {"source":14, "target":15, "bond": 2},  //C14 - O15
+    {"source":12, "target":16, "bond": 1},  //C12 - O16
+    {"source":16, "target":17, "bond": 1},  //016 - H17
+    {"source":11, "target":18, "bond": 1},  //C11 - C18
+    {"source":18, "target":19, "bond": 1},  //C18 - H19
+    {"source":18, "target":20, "bond": 1},  //C18 - H20
+    {"source":18, "target":21, "bond": 1},  //C18 - H21
+    {"source":7, "target":22, "bond": 1},  //C7 - H22
+    {"source":7, "target":23, "bond": 1},  //C7 - H32
+    {"source":10, "target":24, "bond": 1},  //N10 - H24
+    {"source":14, "target":25, "bond": 1}  //C14 - H25
+];
+// VITAMIN B7 - Complete
+
+var vitB7Nodes = [
+   {"atom":"O", "size":160},
+   {"atom":"C", "size":120},
+   {"atom":"N", "size":140},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"O", "size":160},
+   {"atom":"O", "size":160},
+   {"atom":"S", "size":320},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"N", "size":140},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20}
+];
+
+var vitB7Links = [
+  {"source":0, "target":1, "bond":2},
+  {"source":1, "target":2, "bond":1},
+  {"source":2, "target":3, "bond":1},
+  {"source":2, "target":16, "bond":1},
+  {"source":3, "target":4, "bond":1},
+  {"source":3, "target":17, "bond":1},
+  {"source":4, "target":5, "bond":1},
+  {"source":4, "target":27, "bond":1},
+  {"source":5, "target":6, "bond":1},
+  {"source":5, "target":18, "bond":1},
+  {"source":5, "target":19, "bond":1},
+  {"source":6, "target":7, "bond":1},
+  {"source":6, "target":25, "bond":1},
+  {"source":6, "target":26, "bond":1},
+  {"source":7, "target":8, "bond":1},
+  {"source":7, "target":20, "bond":1},
+  {"source":7, "target":21, "bond":1},
+  {"source":8, "target":9, "bond":1},
+  {"source":8, "target":23, "bond":1},
+  {"source":8, "target":24, "bond":1},
+  {"source":9, "target":10, "bond":2},
+  {"source":10, "target":11, "bond":1},
+  {"source":11, "target":22, "bond":1},
+  {"source":4, "target":12, "bond":1},
+  {"source":12, "target":13, "bond":1},
+  {"source":13, "target":14, "bond":1},
+  {"source":13, "target":28, "bond":1},
+  {"source":13, "target":29, "bond":1},
+  {"source":14, "target":15, "bond":1},
+  {"source":14, "target":30, "bond":1},
+  {"source":15, "target":1, "bond":1},
+  {"source":15, "target":31, "bond":1}
+];
+
+// vitamin B9 - complete
+var vitaminB9Nodes = [
+    {"atom":"N", "size":140},
+    {"atom":"C", "size":120},
+    {"atom":"C", "size":120},
+    {"atom":"C", "size":120},
+    {"atom":"N", "size":140},
+    {"atom":"C", "size":120},
+    {"atom":"C", "size":120},
+    {"atom":"N", "size":140},
+    {"atom":"C", "size":120},
+    {"atom":"C", "size":120},
+    {"atom":"C", "size":120},
+    {"atom":"C", "size":120},
+    {"atom":"C", "size":120},
+    {"atom":"N", "size":140},
+    {"atom":"C", "size":120},
+    {"atom":"C", "size":120},
+    {"atom":"C", "size":120},
+    {"atom":"C", "size":120},
+    {"atom":"O", "size":160},
+    {"atom":"C", "size":120},
+    {"atom":"N", "size":140},
+    {"atom":"C", "size":120},
+    {"atom":"N", "size":140},
+    {"atom":"C", "size":120},
+    {"atom":"C", "size":120},
+    {"atom":"C", "size":120},
+    {"atom":"O", "size":160},
+    {"atom":"O", "size":160},
+    {"atom":"O", "size":160},
+    {"atom":"O", "size":160},
+    {"atom":"O", "size":160},
+    {"atom":"C", "size":120},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20},
+    {"atom":"H", "size":20}
+];
+
+var vitaminB9Links = [
+  {"source":0, "target":23, "bond":1},
+  {"source":23, "target":1, "bond":1},
+  {"source":1, "target":2, "bond":1},
+  {"source":2, "target":3, "bond":1},
+  {"source":3, "target":4, "bond":1},
+  {"source":4, "target":5, "bond":2},
+  {"source":5, "target":6, "bond":1},
+  {"source":6, "target":7, "bond":1},
+  {"source":7, "target":8, "bond":1},
+  {"source":8, "target":9, "bond":1},
+  {"source":9, "target":10, "bond":2},
+  {"source":10, "target":11, "bond":1},
+  {"source":11, "target":12, "bond":1},
+  {"source":12, "target":13, "bond":1},
+  {"source":13, "target":14, "bond":1},
+  {"source":14, "target":15, "bond":1},
+  {"source":15, "target":16, "bond":1},
+  {"source":16, "target":17, "bond":1},
+  {"source":17, "target":18, "bond":1},
+  {"source":5, "target":19, "bond":1},
+  {"source":19, "target":20, "bond":2},
+  {"source":20, "target":21, "bond":1},
+  {"source":21, "target":22, "bond":1},
+  {"source":22, "target":23, "bond":2},
+  {"source":23, "target":0, "bond":0},
+  {"source":11, "target":24, "bond":2},
+  {"source":24, "target":25, "bond":1},
+  {"source":25, "target":8, "bond":2},
+  {"source":2, "target":26, "bond":2},
+  {"source":12, "target":27, "bond":2},
+  {"source":14, "target":31, "bond":1},
+  {"source":31, "target":28, "bond":2},
+  {"source":31, "target":29, "bond":1},
+  {"source":17, "target":30, "bond":2},
+  {"source":21, "target":3, "bond":2},
+  {"source":0, "target":32, "bond":1},
+  {"source":0, "target":33, "bond":1},
+  {"source":1, "target":34, "bond":1},
+  {"source":6, "target":35, "bond":1},
+  {"source":6, "target":36, "bond":1},
+  {"source":7, "target":37, "bond":1},
+  {"source":9, "target":38, "bond":1},
+  {"source":10, "target":39, "bond":1},
+  {"source":13, "target":40, "bond":1},
+  {"source":14, "target":41, "bond":1},
+  {"source":29, "target":42, "bond":1},
+  {"source":15, "target":43, "bond":1},
+  {"source":15, "target":44, "bond":1},
+  {"source":16, "target":45, "bond":1},
+  {"source":16, "target":46, "bond":1},
+  {"source":18, "target":47, "bond":1},
+  {"source":24, "target":48, "bond":1},
+  {"source":25, "target":49, "bond":1},
+  {"source":19, "target":50, "bond":1}
+];
+
+// VITAMIN B12 - Complete
+
+var VitB12nodes = [
+   {"atom":"C", "size":120}, //C0
+   {"atom":"C", "size":120}, //C1
+   {"atom":"C", "size":120}, //C2
+   {"atom":"C", "size":120}, //C3
+   {"atom":"C", "size":120}, //C4
+   {"atom":"C", "size":120}, //C5
+   {"atom":"C", "size":120}, //C6
+   {"atom":"C", "size":120}, //C7
+   {"atom":"C", "size":120}, //C8
+   {"atom":"C", "size":120}, //C9
+   {"atom":"C", "size":120}, //C10
+   {"atom":"C", "size":120}, //C11
+   {"atom":"C", "size":120}, //C12
+   {"atom":"C", "size":120}, //C13
+   {"atom":"C", "size":120}, //C14
+   {"atom":"C", "size":120}, //C15
+   {"atom":"C", "size":120}, //C16
+   {"atom":"C", "size":120}, //C17
+   {"atom":"C", "size":120}, //C18
+   {"atom":"N", "size":140},  //N19
+   {"atom":"C", "size":120},  //C20
+   {"atom":"O", "size":160},   //O21
+   {"atom":"C", "size":120},  //C22
+   {"atom":"H", "size":20},   //H23
+   {"atom":"H", "size":20},   //H24
+   {"atom":"H", "size":20},   //H25
+   {"atom":"H", "size":20},   //H26
+   {"atom":"C", "size":120},  //C27
+   {"atom":"H", "size":20},   //H28
+   {"atom":"H", "size":20},   //H29
+   {"atom":"H", "size":20},   //H30
+   {"atom":"N", "size":140},  //N19
+   {"atom":"C", "size":120},  //C20
+   {"atom":"O", "size":160},   //O21
+   {"atom":"C", "size":120},  //C22
+   {"atom":"H", "size":20},   //H23
+   {"atom":"H", "size":20},   //H24
+   {"atom":"H", "size":20},   //H25
+   {"atom":"H", "size":20},   //H26
+   {"atom":"C", "size":120},  //C39
+   {"atom":"H", "size":20},   //H40
+   {"atom":"H", "size":20},   //H41
+   {"atom":"C", "size":120},  //C42
+   {"atom":"H", "size":20},   //H43
+   {"atom":"H", "size":20},   //H44
+   {"atom":"H", "size":20},   //H45
+   {"atom":"C", "size":120},  //C46
+   {"atom":"H", "size":20},   //H47
+   {"atom":"H", "size":20},   //H48
+   {"atom":"H", "size":20},   //H49
+   {"atom":"N", "size":140},  //N50
+   {"atom":"C", "size":120},  //C51
+   {"atom":"O", "size":160},  //O52
+   {"atom":"C", "size":120},  //C53
+   {"atom":"H", "size":20},   //H54
+   {"atom":"H", "size":20},   //H55
+   {"atom":"H", "size":20},   //H56
+   {"atom":"H", "size":20},   //H57
+   {"atom":"C", "size":120},  //C58
+   {"atom":"H", "size":20},   //H59
+   {"atom":"H", "size":20},   //H60
+   {"atom":"C", "size":120},  //C61
+   {"atom":"H", "size":20},   //H62
+   {"atom":"H", "size":20},   //H63
+   {"atom":"C", "size":120},  //C64
+   {"atom":"O", "size":160},  //O65
+   {"atom":"N", "size":140},  //N66
+   {"atom":"H", "size":20},   //H67
+   {"atom":"H", "size":20},   //H68
+   {"atom":"H", "size":20},   //H68
+   {"atom":"C", "size":120},  //C70
+   {"atom":"H", "size":20},   //H71
+   {"atom":"H", "size":20},   //H72
+   {"atom":"H", "size":20},   //H73
+   {"atom":"C", "size":120},  //C74
+   {"atom":"H", "size":20},   //H75
+   {"atom":"H", "size":20},   //H76
+   {"atom":"H", "size":20},   //H77
+   {"atom":"C", "size":120},  //C78
+   {"atom":"H", "size":20},   //H79
+   {"atom":"H", "size":20},   //H80
+   {"atom":"H", "size":20},   //H81
+   {"atom":"C", "size":120},  //C82
+   {"atom":"H", "size":20},   //H83
+   {"atom":"H", "size":20},   //H84
+   {"atom":"H", "size":20},   //H85
+   {"atom":"C", "size":120},  //C86
+   {"atom":"H", "size":20},   //H87
+   {"atom":"H", "size":20},   //H88
+   {"atom":"H", "size":20},   //H89
+   {"atom":"H", "size":20},   //H90
+   {"atom":"N", "size":140},  //N91
+   {"atom":"H", "size":20},   //H92
+   {"atom":"H", "size":20},   //H93
+   {"atom":"C", "size":120},  //C94
+   {"atom":"O", "size":160},  //O95
+   {"atom":"C", "size":120},  //C96
+   {"atom":"H", "size":20},   //H96
+   {"atom":"H", "size":20},   //H98
+   {"atom":"C", "size":120},  //C96
+   {"atom":"H", "size":20},   //H96
+   {"atom":"H", "size":20},   //H98
+   {"atom":"C", "size":120},  //C96
+   {"atom":"H", "size":20},   //H96
+   {"atom":"H", "size":20},   //H98
+   {"atom":"C", "size":120},  //C94
+   {"atom":"O", "size":160},  //O95
+   {"atom":"N", "size":140},  //N91
+   {"atom":"H", "size":20},   //H96
+   {"atom":"H", "size":20},   //H98
+   {"atom":"C", "size":120},  //C110
+   {"atom":"H", "size":20}, //H111
+   {"atom":"H", "size":20}, //H112
+   {"atom":"C", "size":120},  //C113
+   {"atom":"H", "size":20}, //H114
+   {"atom":"H", "size":20}, //H115
+   {"atom":"C", "size":120},  //C116
+   {"atom":"O", "size":160},  //O117
+   {"atom":"N", "size":140},  //N118
+   {"atom":"H", "size":20}, //H119
+   {"atom":"C", "size":120}, //C120
+   {"atom":"H", "size":20},  //H121
+   {"atom":"H", "size":20},  //H122
+   {"atom":"C", "size":120}, //H122
+   {"atom":"O", "size":160}, //O124
+   {"atom":"P", "size":300}, //P125
+   {"atom":"O", "size":160}, //O126
+   {"atom":"O", "size":160}, //O127
+   {"atom":"O", "size":160}, //O128
+   {"atom":"C", "size":120}, //C129
+   {"atom":"C", "size":120},  //C130
+   {"atom":"H", "size":20},   //H131
+   {"atom":"H", "size":20},   //H132
+   {"atom":"H", "size":20},   //H133
+   {"atom":"H", "size":20},   //H134
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"O", "size":160},
+   {"atom":"C", "size":120},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"C", "size":120},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"O", "size":160},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"O", "size":160},
+   {"atom":"H", "size":20},
+   {"atom":"N", "size":140},
+   {"atom":"C", "size":120},
+   {"atom":"N", "size":140},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"C", "size":120},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"Co", "size":540},
+   {"atom":"N", "size":140},
+   {"atom":"N", "size":140},
+   {"atom":"N", "size":140},
+   {"atom":"N", "size":140},
+   {"atom":"C", "size":120},
+   {"atom":"N", "size":140},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20}
+];
+
+var VitB12links = [
+    {"source":0, "target":1, "bond": 1},  //C0 - C1
+    {"source":0, "target":22, "bond": 1},  //C0 - C22
+    {"source":0, "target":27, "bond": 1},  //C0 - C27
+    {"source":1, "target":2, "bond": 1},  //C1 - C2
+    {"source":1, "target":39, "bond": 1},  //C1 - C39
+    {"source":2, "target":3, "bond": 1},  //C2 - C3
+    {"source":3, "target":4, "bond": 2},  //C3 - C4
+    {"source":3, "target":42, "bond": 1},  //C3 - C4
+    {"source":4, "target":5, "bond": 1},  //C4 - C5
+    {"source":5, "target":6, "bond": 1},  //C5 - C6
+    {"source":5, "target":46, "bond": 1},  //C5 - C46
+    {"source":5, "target":51, "bond": 1},  //C5 - C51
+    {"source":6, "target":7, "bond": 1},  //C6 - C7
+    {"source":6, "target":58, "bond": 1},  //C6 - C58
+    {"source":7, "target":8, "bond": 1},  //C7 - C8
+    {"source":8, "target":9, "bond": 2},  //C8 - C9
+    {"source":9, "target":10, "bond": 1},  //C9 - C10
+    {"source":10, "target":11, "bond": 1},  //C10 - C11
+    {"source":10, "target":70, "bond": 1},  //C10 - C70
+    {"source":10, "target":74, "bond": 1},  //C10 - C74
+    {"source":11, "target":12, "bond": 1},  //C11 - C12
+    {"source":11, "target":99, "bond": 1},  //C11 - C99
+    {"source":12, "target":13, "bond": 1},  //C12 - C13
+    {"source":13, "target":14, "bond": 2},  //C13 - C14
+    {"source":13, "target":78, "bond": 1},  //C13 - C78
+    {"source":14, "target":15, "bond": 1},  //C14 - C15
+    {"source":15, "target":16, "bond": 1},  //C15 - C16
+    {"source":15, "target":82, "bond": 1},  //C15 - C82
+    {"source":16, "target":17, "bond": 1},  //C16 - C17
+    {"source":16, "target":89, "bond": 1},  //C16 - H89
+    {"source":16, "target":96, "bond": 1},  //C16 - H96
+    {"source":17, "target":18, "bond": 1},  //C17 - C18
+    {"source":17, "target":90, "bond": 1},  //C17 - H90
+    {"source":18, "target":0, "bond": 1},  //C18 - C0
+    {"source":18, "target":86, "bond": 1},  //C18 - C86
+    {"source":19, "target":20, "bond": 1},  //N19 - C20
+    {"source":19, "target":23, "bond": 1},  //N19 - H23
+    {"source":19, "target":24, "bond": 1},  //N19 - H24
+    {"source":20, "target":21, "bond": 2},  //C20 - O21
+    {"source":20, "target":22, "bond": 1},  //O21 - C22
+    {"source":22, "target":25, "bond": 1},  //C22 - H25
+    {"source":22, "target":26, "bond": 1},  //C22 - H26
+    {"source":27, "target":28, "bond": 1},  //C27 - H28
+    {"source":27, "target":29, "bond": 1},  //C27 - H29
+    {"source":27, "target":30, "bond": 1},  //C27 - H30
+    {"source":31, "target":32, "bond": 1},  //N31 - C32
+    {"source":31, "target":35, "bond": 1},  //N31 - H35
+    {"source":31, "target":36, "bond": 1},  //N31 - H36
+    {"source":32, "target":34, "bond": 1},  //C32 - O33
+    {"source":33, "target":32, "bond": 2},  //O33 - C34
+    {"source":34, "target":37, "bond": 1},  //C34 - H37
+    {"source":34, "target":38, "bond": 1},  //C34 - H38
+    {"source":34, "target":39, "bond": 1},  //C34 - C39
+    {"source":39, "target":40, "bond": 1},  //C34 - H40
+    {"source":39, "target":41, "bond": 1},  //C34 - H41
+    {"source":42, "target":43, "bond": 1},  //C42 - C43
+    {"source":42, "target":44, "bond": 1},  //C42 - H44
+    {"source":42, "target":45, "bond": 1},  //C42 - H45
+    {"source":46, "target":47, "bond": 1},  //C46 - C47
+    {"source":46, "target":48, "bond": 1},  //C46 - H48
+    {"source":46, "target":49, "bond": 1},  //C46 - H49
+    {"source":50, "target":53, "bond": 1},  //N50 - O53
+    {"source":50, "target":54, "bond": 1},  //N50 - H54
+    {"source":50, "target":55, "bond": 1},  //N50 - H55
+    {"source":52, "target":53, "bond": 2},  //O52 - C53
+    {"source":51, "target":53, "bond": 1},  //C51 - C53
+    {"source":51, "target":57, "bond": 1},  //C51 - H57
+    {"source":51, "target":56, "bond": 1},  //C51 - H56
+    {"source":58, "target":59, "bond": 1},  //C58 - H59
+    {"source":58, "target":60, "bond": 1},  //C58 - H60
+    {"source":58, "target":61, "bond": 1},  //C58 - C61
+    {"source":61, "target":64, "bond": 1},  //C61 - C64
+    {"source":61, "target":62, "bond": 1},  //C61 - C62
+    {"source":61, "target":63, "bond": 1},  //C61 - C63
+    {"source":64, "target":65, "bond": 2},  //C64 - C65
+    {"source":64, "target":66, "bond": 1},  //O65 - N66
+    {"source":66, "target":67, "bond": 1},  //N66 - H67
+    {"source":66, "target":68, "bond": 1},  //N66 - H68
+    {"source":70, "target":71, "bond": 1},  //C70 - H71
+    {"source":70, "target":72, "bond": 1},  //C70 - H72
+    {"source":70, "target":73, "bond": 1},  //C70 - H73
+    {"source":74, "target":75, "bond": 1},  //C74 - H75
+    {"source":74, "target":76, "bond": 1},  //C74 - H76
+    {"source":74, "target":77, "bond": 1},  //C74 - H77
+    {"source":78, "target":79, "bond": 1},  //C78 - H79
+    {"source":78, "target":80, "bond": 1},  //C78 - H80
+    {"source":78, "target":81, "bond": 1},  //C78 - H81
+    {"source":82, "target":83, "bond": 1},  //C82 - H83
+    {"source":82, "target":84, "bond": 1},  //C82 - H84
+    {"source":82, "target":85, "bond": 1},  //C82 - H85
+    {"source":86, "target":87, "bond": 1},  //C86 - H87
+    {"source":86, "target":88, "bond": 1},  //C86 - H88
+    {"source":86, "target":69, "bond": 1},  //C86 - H69
+    {"source":91, "target":94, "bond": 1},  //N91 - C94
+    {"source":91, "target":92, "bond": 1},  //N91 - H92
+    {"source":91, "target":93, "bond": 1},  //N91 - H93
+    {"source":94, "target":95, "bond": 2},  //C94 - O95
+    {"source":94, "target":96, "bond": 1},  //O95 - C96
+    {"source":96, "target":97, "bond": 1},  //C96 - H97
+    {"source":96, "target":98, "bond": 1},  //C96 - H98
+    {"source":99, "target":102, "bond": 1},  //C99 - C102
+    {"source":99, "target":100, "bond": 1},  //C99 - C100
+    {"source":99, "target":101, "bond": 1},  //C99 - C101
+    {"source":102, "target":105, "bond": 1},  //C102 - 105
+    {"source":102, "target":103, "bond": 1},  //C102 - 103
+    {"source":102, "target":104, "bond": 1},  //C102 - 104
+    {"source":105, "target":106, "bond": 2},  //C105 - 106
+    {"source":105, "target":107, "bond": 1},  //C106 - 107
+    {"source":107, "target":108, "bond": 1},  //C107 - 108
+    {"source":107, "target":109, "bond": 1},  //C107 - 109
+    {"source":110, "target":111, "bond": 1},  //C110 - H111
+    {"source":110, "target":112, "bond": 1}, //C110 - H112
+    {"source":110, "target":113, "bond": 1}, //C110 - H113
+    {"source":110, "target":15, "bond": 1}, //C110 - C15
+    {"source":113, "target":114, "bond": 1},  //C113 - H114
+    {"source":113, "target":115, "bond": 1}, //C113 - H115
+    {"source":113, "target":116, "bond": 1}, //C113 - C116
+    {"source":116, "target":117, "bond": 2},
+    {"source":116, "target":118, "bond": 1},
+    {"source":118, "target":119, "bond": 1},
+    {"source":118, "target":120, "bond": 1},
+    {"source":120, "target":121, "bond": 1},
+    {"source":120, "target":122, "bond": 1},
+    {"source":120, "target":123, "bond": 1},
+    {"source":123, "target":124, "bond": 1},
+    {"source":124, "target":125, "bond": 1},
+    {"source":125, "target":126, "bond": 1},
+    {"source":125, "target":127, "bond": 1},
+    {"source":125, "target":128, "bond": 1},
+    {"source":129, "target":128, "bond": 1},
+    {"source":130, "target":123, "bond": 1},
+    {"source":130, "target":131, "bond": 1},
+    {"source":130, "target":132, "bond": 1},
+    {"source":130, "target":133, "bond": 1},
+    {"source":134, "target":123, "bond": 1},
+    {"source":129, "target":135, "bond": 1},
+    {"source":137, "target":138, "bond": 1},
+    {"source":138, "target":129, "bond": 1},
+    {"source":129, "target":139, "bond": 1},
+    {"source":135, "target":140, "bond": 1},
+    {"source":135, "target":141, "bond": 1},
+    {"source":141, "target":142, "bond": 1},
+    {"source":141, "target":143, "bond": 1},
+    {"source":141, "target":144, "bond": 1},
+    {"source":144, "target":145, "bond": 1},
+    {"source":137, "target":146, "bond": 1},
+    {"source":138, "target":136, "bond": 1},
+    {"source":138, "target":148, "bond": 1},
+    {"source":135, "target":147, "bond": 1},
+    {"source":136, "target":147, "bond": 1},
+    {"source":136, "target":149, "bond": 1},
+    {"source":149, "target":150, "bond": 1},
+    {"source":150, "target":151, "bond": 2},
+    {"source":151, "target":152, "bond": 1},
+    {"source":152, "target":153, "bond": 1},
+    {"source":153, "target":154, "bond": 1},
+    {"source":154, "target":155, "bond": 1},
+    {"source":155, "target":156, "bond": 1},
+    {"source":156, "target":157, "bond": 1},
+    {"source":157, "target":149, "bond": 1},
+    {"source":152, "target":157, "bond": 1},
+    {"source":158, "target":154, "bond": 1},
+    {"source":158, "target":159, "bond": 1},
+    {"source":158, "target":160, "bond": 1},
+    {"source":158, "target":161, "bond": 1},
+    {"source":162, "target":155, "bond": 1},
+    {"source":162, "target":163, "bond": 1},
+    {"source":162, "target":164, "bond": 1},
+    {"source":162, "target":165, "bond": 1},
+    {"source":166, "target":167, "bond": 1},
+    {"source":166, "target":168, "bond": 1},
+    {"source":166, "target":169, "bond": 1},
+    {"source":166, "target":170, "bond": 1},
+    {"source":166, "target":171, "bond": 1},
+    {"source":167, "target":4, "bond": 1},
+    {"source":167, "target":7, "bond": 2},
+    {"source":168, "target":14, "bond": 1},
+    {"source":168, "target":17, "bond": 1},
+    {"source":169, "target":2, "bond": 2},
+    {"source":169, "target":18, "bond": 1},
+    {"source":170, "target":9, "bond": 1},
+    {"source":170, "target":12, "bond": 2},
+    {"source":172, "target":171, "bond": 2},
+    {"source":116, "target":173, "bond": 1},
+    {"source":116, "target":174, "bond": 1},
+    {"source":126, "target":175, "bond": 1},
+    {"source":153, "target":176, "bond": 1},
+    {"source":156, "target":177, "bond": 1},
+    {"source":150, "target":178, "bond": 1},
+    {"source":136, "target":179, "bond": 1}
+];
+
+//VITAMIN C - Complete
+
+var VitCNodes = [
+  {"atom":"C", "size":100}, //0
+  {"atom":"C", "size":100}, //1
+  {"atom":"C", "size":100}, //2
+  {"atom":"C", "size":100}, //3
+  {"atom":"C", "size":100}, //4
+  {"atom":"C", "size":100}, //5
+  {"atom":"O", "size":200}, //6
+  {"atom":"O", "size":200}, //7
+  {"atom":"O", "size":200}, //8
+  {"atom":"O", "size":200}, //9
+  {"atom":"O", "size":200}, //10
+  {"atom":"O", "size":200}, //11
+  {"atom":"H", "size":10},  //12
+  {"atom":"H", "size":10},  //13
+  {"atom":"H", "size":10},  //14
+  {"atom":"H", "size":10},  //15
+  {"atom":"H", "size":10},  //16
+  {"atom":"H", "size":10},  //17
+  {"atom":"H", "size":10},  //18
+  {"atom":"H", "size":10}   //19
+];
+
+var VitCLinks = [
+  {"source":0, "target":1},  //C0 - C1
+  {"source":0, "target":12}, //C0 - H12
+  {"source":0, "target":4},  //C0 - C4
+  {"source":1, "target":2},  //C1 - C2
+  {"source":1, "target": 7}, //C1 - O7
+  {"source":7, "target": 13}, //07 - H13
+  {"source":2, "target":3},   //C2 - C3
+  {"source":2, "target": 8},  //C2 - O8
+  {"source":8, "target": 14}, //08 - H14
+  {"source":3, "target":6},   //C3 - O6
+  {"source":3, "target": 9},  //C3 - O9
+  {"source":6, "target":0},   //O6 - C1
+  {"source":4, "target":10},  //C4 - O10
+  {"source":10, "target":15}, //O10 - H15
+  {"source":4, "target":16},  //C4 - H16
+  {"source":4, "target":5},   //C4 - C5
+  {"source":5, "target":11},  //C5 - O11
+  {"source":5, "target":17},  //C5 - H17
+  {"source":5, "target":18},  //C5 - H18
+  {"source":11, "target":19}  //O11 - H19
+];
+
+// Vitamin D - Complete
+var VitDNodes = [
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"O", "size":160},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20}
+];
+
+var vitDLinks = [
+    {"source":0, "target":1, "bond": 2},
+    {"source":1, "target":2, "bond": 1},
+    {"source":2, "target":3, "bond": 1},
+    {"source":3, "target":4, "bond": 1},
+    {"source":4, "target":5, "bond": 1},
+    {"source":5, "target":6, "bond": 1},
+    {"source":6, "target":7, "bond": 2},
+		{"source":7, "target":8, "bond":1},
+		{"source":8, "target":9, "bond":2},
+		{"source":9, "target":10, "bond":1},
+		{"source":10, "target":11, "bond":1},
+		{"source":11, "target":12, "bond":1},
+		{"source":12, "target":13, "bond":1},
+		{"source":13, "target":14, "bond":1},
+		{"source":14, "target":15, "bond":1},
+		{"source":15, "target":16, "bond":1},
+		{"source":16, "target":17, "bond":1},
+		{"source":17, "target":18, "bond":1},
+		{"source":18, "target":19, "bond":1},
+		{"source":19, "target":20, "bond":1},
+		{"source":20, "target":21, "bond":1},
+		{"source":21, "target":22, "bond":1},
+		{"source":22, "target":23, "bond":1},
+    {"source":1, "target":6, "bond": 1},
+    {"source":4, "target":27, "bond": 1},
+		{"source":9, "target":14, "bond": 1},
+		{"source":13, "target":17, "bond": 1},
+		{"source":13, "target":24, "bond": 1},
+		{"source":18, "target":25, "bond": 1},
+		{"source":22, "target":26, "bond": 1},
+    {"source":0, "target":28, "bond": 1},
+    {"source":0, "target":29, "bond": 1},
+    {"source":2, "target":30, "bond": 1},
+    {"source":2, "target":31, "bond": 1},
+    {"source":3, "target":32, "bond": 1},
+    {"source":3, "target":33, "bond": 1},
+    {"source":4, "target":34, "bond": 1},
+    {"source":5, "target":35, "bond": 1},
+    {"source":5, "target":36, "bond": 1},
+    {"source":7, "target":37, "bond": 1},
+    {"source":8, "target":38, "bond": 1},
+    {"source":10, "target":39, "bond": 1},
+    {"source":10, "target":40, "bond": 1},
+    {"source":11, "target":41, "bond": 1},
+    {"source":11, "target":42, "bond": 1},
+    {"source":12, "target":43, "bond": 1},
+    {"source":12, "target":44, "bond": 1},
+    {"source":14, "target":45, "bond": 1},
+    {"source":15, "target":46, "bond": 1},
+    {"source":15, "target":47, "bond": 1},
+    {"source":16, "target":48, "bond": 1},
+    {"source":16, "target":49, "bond": 1},
+    {"source":17, "target":50, "bond": 1},
+    {"source":18, "target":51, "bond": 1},
+    {"source":19, "target":52, "bond": 1},
+    {"source":19, "target":53, "bond": 1},
+    {"source":20, "target":54, "bond": 1},
+    {"source":20, "target":55, "bond": 1},
+    {"source":21, "target":56, "bond": 1},
+    {"source":21, "target":56, "bond": 1},
+    {"source":22, "target":57, "bond": 1},
+    {"source":23, "target":58, "bond": 1},
+    {"source":23, "target":59, "bond": 1},
+    {"source":24, "target":60, "bond": 1},
+    {"source":24, "target":61, "bond": 1},
+    {"source":24, "target":62, "bond": 1},
+    {"source":25, "target":63, "bond": 1},
+    {"source":25, "target":64, "bond": 1},
+    {"source":25, "target":65, "bond": 1},
+    {"source":26, "target":66, "bond": 1},
+    {"source":26, "target":67, "bond": 1},
+    {"source":26, "target":68, "bond": 1},
+    {"source":23, "target":69, "bond": 1},
+    {"source":21, "target":70, "bond": 1},
+    {"source":27, "target":71, "bond": 1}
+];
+
+//Vitamin E - Complete
+
+var VitEnodes = [
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"O", "size":160},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"O", "size":160},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20}
+];
+
+var VitElinks = [
+    {"source":1, "target":2, "bond": 1},
+    {"source":2, "target":3, "bond": 1},
+    {"source":3, "target":4, "bond": 2},
+    {"source":4, "target":5, "bond": 1},
+    {"source":5, "target":6, "bond": 1},
+    {"source":6, "target":7, "bond": 1},
+		{"source":7, "target":8, "bond":1},
+		{"source":8, "target":9, "bond":1},
+		{"source":10, "target":11, "bond":2},
+		{"source":11, "target":12, "bond":1},
+		{"source":12, "target":13, "bond":2},
+		{"source":14, "target":15, "bond":1},
+		{"source":15, "target":16, "bond":1},
+		{"source":16, "target":17, "bond":1},
+		{"source":17, "target":18, "bond":1},
+		{"source":18, "target":19, "bond":1},
+		{"source":19, "target":20, "bond":1},
+		{"source":20, "target":21, "bond":1},
+		{"source":21, "target":22, "bond":1},
+		{"source":22, "target":23, "bond":1},
+    {"source":1, "target":6, "bond": 1},
+    {"source":6, "target":27, "bond": 1},
+		{"source":9, "target":14, "bond": 1},
+		{"source":13, "target":24, "bond": 1},
+		{"source":18, "target":25, "bond": 1},
+		{"source":22, "target":26, "bond": 1},
+		{"source":9, "target":28, "bond": 1},
+    {"source":0, "target":10, "bond": 1},
+    {"source":30, "target":31, "bond": 1},
+    {"source":7, "target":37, "bond": 1},
+    {"source":8, "target":38, "bond": 1},
+    {"source":0, "target":39, "bond": 1},
+    {"source":0, "target":40, "bond": 1},
+    {"source":14, "target":45, "bond": 1},
+    {"source":15, "target":46, "bond": 1},
+    {"source":15, "target":47, "bond": 1},
+    {"source":16, "target":48, "bond": 1},
+    {"source":16, "target":49, "bond": 1},
+    {"source":17, "target":50, "bond": 1},
+    {"source":18, "target":51, "bond": 1},
+    {"source":19, "target":52, "bond": 1},
+    {"source":19, "target":53, "bond": 1},
+    {"source":20, "target":54, "bond": 1},
+    {"source":20, "target":55, "bond": 1},
+    {"source":21, "target":56, "bond": 1},
+    {"source":21, "target":56, "bond": 1},
+    {"source":22, "target":57, "bond": 1},
+    {"source":23, "target":58, "bond": 1},
+    {"source":23, "target":59, "bond": 1},
+    {"source":24, "target":60, "bond": 1},
+    {"source":24, "target":61, "bond": 1},
+    {"source":24, "target":62, "bond": 1},
+    {"source":25, "target":63, "bond": 1},
+    {"source":25, "target":64, "bond": 1},
+    {"source":25, "target":65, "bond": 1},
+    {"source":26, "target":66, "bond": 1},
+    {"source":26, "target":67, "bond": 1},
+    {"source":26, "target":68, "bond": 1},
+    {"source":23, "target":69, "bond": 1},
+    {"source":21, "target":70, "bond": 1},
+    {"source":27, "target":71, "bond": 1},
+    {"source":3, "target":10, "bond": 1},
+    {"source":4, "target":13, "bond": 1},
+		{"source":28, "target":80, "bond":1},
+		{"source":28, "target":79, "bond": 1},
+		{"source":28, "target":78, "bond": 1},
+		{"source":27, "target":77, "bond": 1},
+		{"source":27, "target":76, "bond": 1},
+		{"source":17, "target":72, "bond": 1},
+		{"source":14, "target":73, "bond": 1},
+		{"source":9, "target":74, "bond": 1},
+		{"source":8, "target":75, "bond": 1},
+    {"source":11, "target":30, "bond": 1},
+    {"source":12, "target":29, "bond": 1},
+    {"source":29, "target":32, "bond": 1},
+    {"source":29, "target":33, "bond": 1},
+    {"source":29, "target":34, "bond": 1},
+    {"source":0, "target":35, "bond": 1},
+    {"source":7, "target":42, "bond": 1},
+    {"source":2, "target":43, "bond": 1},
+    {"source":2, "target":44, "bond": 1},
+    {"source":1, "target":41, "bond": 1},
+    {"source":1, "target":36, "bond": 1}
+];
+
+// Vitamin K - Complete
+
+
+var VitKnodes = [
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"C", "size":120},
+   {"atom":"O", "size":160},
+   {"atom":"O", "size":160},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20},
+   {"atom":"H", "size":20}
+];
+
+var vitKlinks = [
+    {"source":0, "target":1, "bond": 1},
+    {"source":1, "target":2, "bond": 1},
+    {"source":2, "target":3, "bond": 1},
+    {"source":3, "target":4, "bond": 1},
+    {"source":4, "target":5, "bond": 1},
+    {"source":5, "target":6, "bond": 1},
+    {"source":6, "target":7, "bond": 1},
+		{"source":7, "target":8, "bond":1},
+		{"source":8, "target":9, "bond":1},
+		{"source":9, "target":10, "bond":1},
+		{"source":10, "target":11, "bond":1},
+		{"source":11, "target":12, "bond":1},
+		{"source":12, "target":13, "bond":1},
+		{"source":13, "target":14, "bond":2},
+		{"source":14, "target":15, "bond":1},
+		{"source":15, "target":16, "bond":1},
+		{"source":16, "target":17, "bond":2},
+		{"source":17, "target":18, "bond":1},
+		{"source":18, "target":19, "bond":1},
+		{"source":21, "target":19, "bond":1},
+		{"source":22, "target":23, "bond":1},
+		{"source":23, "target":24, "bond":2},
+		{"source":24, "target":25, "bond":1},
+		{"source":25, "target":26, "bond":1},
+		{"source":25, "target":19, "bond":2},
+		{"source":26, "target":16, "bond":1},
+		{"source":22, "target":21, "bond":2},
+    {"source":1, "target":27, "bond": 1},
+    {"source":5, "target":28, "bond": 1},
+    {"source":9, "target":29, "bond": 1},
+    {"source":13, "target":30, "bond": 1},
+		{"source":17, "target":20, "bond":1},
+		{"source":18, "target":31, "bond":2},
+		{"source":26, "target":32, "bond":2},
+    {"source":0, "target":33, "bond": 1},
+    {"source":0, "target":34, "bond": 1},
+    {"source":0, "target":35, "bond": 1},
+    {"source":27, "target":36, "bond": 1},
+    {"source":27, "target":37, "bond": 1},
+    {"source":27, "target":38, "bond": 1},
+    {"source":28, "target":39, "bond": 1},
+    {"source":28, "target":40, "bond": 1},
+    {"source":28, "target":41, "bond": 1},
+    {"source":29, "target":42, "bond": 1},
+    {"source":29, "target":43, "bond": 1},
+    {"source":29, "target":44, "bond": 1},
+    {"source":30, "target":45, "bond": 1},
+    {"source":30, "target":46, "bond": 1},
+    {"source":30, "target":47, "bond": 1},
+    {"source":20, "target":48, "bond": 1},
+    {"source":20, "target":49, "bond": 1},
+    {"source":20, "target":50, "bond": 1},
+    {"source":1, "target":51, "bond": 1},
+    {"source":2, "target":52, "bond": 1},
+    {"source":2, "target":53, "bond": 1},
+    {"source":3, "target":54, "bond": 1},
+    {"source":3, "target":55, "bond": 1},
+    {"source":4, "target":56, "bond": 1},
+    {"source":4, "target":57, "bond": 1},
+    {"source":5, "target":58, "bond": 1},
+    {"source":6, "target":59, "bond": 1},
+    {"source":6, "target":60, "bond": 1},
+    {"source":7, "target":61, "bond": 1},
+    {"source":7, "target":62, "bond": 1},
+    {"source":8, "target":63, "bond": 1},
+    {"source":8, "target":64, "bond": 1},
+    {"source":9, "target":65, "bond": 1},
+    {"source":10, "target":66, "bond": 1},
+    {"source":10, "target":67, "bond": 1},
+    {"source":11, "target":68, "bond": 1},
+    {"source":11, "target":69, "bond": 1},
+    {"source":12, "target":70, "bond": 1},
+    {"source":12, "target":71, "bond": 1},
+    {"source":14, "target":73, "bond": 1},
+    {"source":15, "target":74, "bond": 1},
+    {"source":15, "target":75, "bond": 1},
+    {"source":21, "target":76, "bond": 1},
+    {"source":22, "target":77, "bond": 1},
+    {"source":23, "target":78, "bond": 1},
+    {"source":24, "target":72, "bond": 1}
+];
+

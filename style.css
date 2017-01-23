@@ -1,0 +1,133 @@
+.structure{
+ background:black;
+}
+
+.link line {
+  stroke:lightgray;
+}
+
+.link line.separator {
+  stroke: black;
+  stroke-width: 2px;
+}
+
+.node circle {
+  stroke: darkgray;
+  stroke-width: 1px;
+}
+
+.node text {
+  font: 10px sans-serif;
+  pointer-events: none;
+}
+
+
+/////
+/* .link { */
+/*   fill: steelblue; */
+/*   stroke: lightgray; */
+/*   stroke-width: 3px; */
+/* } */
+/*  */
+/* .double { */
+/*   stroke: #fff; */
+/*   stroke-width:1px; */
+/* } */
+/*  */
+/* .node circle { */
+/*   stroke: solid black 1px; */
+/* } */
+/* .node text { */
+/*   pointer-events: none; */
+/*   font: 14px sans-serif; */
+/*   color: blue; */
+/* } */
+
+.container{
+ display: flex;
+ flex-grow: 1;
+}
+
+
+.structure{
+  border: 1px solid black;
+  width: 100%;
+  height: 60%;
+  margin-bottom: 15px;
+}
+
+.description{
+  border: 1px solid black;
+  width: 100%;
+  height: 30%;
+  margin-top: 15px;
+
+}
+
+.chart{
+  border: 1px solid black;
+  width: 100%;
+  height: 50%;
+  margin-bottom: 15px;
+}
+
+.donutGraph{
+  border: 1px solid black;
+  width: 100%;
+  height: 40%;
+  margin-top: 15px;
+}
+
+.vitamin{
+  display: inline-block;
+  width: 55vw;
+  height: 100vh;
+  margin: 10px;
+  float: left;
+}
+
+.graphs{
+  display: inline-block;
+  width: 40vw;
+  height: 100vh;
+  margin: 10px;
+}
+
+svg{
+ width:100%;
+ height:100%;
+}
+
+.chart .legend {
+  fill: black;
+  font: 14px sans-serif;
+  text-anchor: start;
+  font-size: 18px;
+}
+
+.chart text {
+  fill: white;
+  font: 18px sans-serif;
+  text-anchor: end;
+}
+
+.chart .label {
+  fill: black;
+  font: 22px sans-serif;
+  font-weight: bold;
+  text-anchor: end;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+
+
