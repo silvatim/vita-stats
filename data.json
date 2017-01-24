@@ -1,5 +1,5 @@
 {
- "vitaminA":{
+ "vitamin A":{
      "title":"Vitamin A - Retinol",
      "description": "Vitamin Description Goes here",
      "recommendedIntakes":{
@@ -73,7 +73,7 @@
         {"atom":"H", "size":10},
         {"atom":"H", "size":10},
         {"atom":"H", "size":10},
-        {"atom":"C50", "size":100}
+        {"atom":"C", "size":100}
    ],
    "links":[
         {"source":0, "target":1, "bond":1},
@@ -129,7 +129,7 @@
         {"source":50, "target":45, "bond":1}
     ]
   },
-   "vitaminB1":{
+   "vitamin B1":{
      "title":"Vitamin B1 - Thiamine",
      "description": "Vitamin Description Goes here",
      "recommendedIntakes":{
@@ -226,7 +226,7 @@
       {"source":1, "target":6, "bond":1}
     ]
   },
- "vitaminB2":{
+ "vitamin B2":{
      "title":"Vitamin B2 - Riboflavin",
      "description": "Vitamin Description Goes here",
      "recommendedIntakes":{
@@ -352,7 +352,7 @@
         {"source":39, "target":41, "bond":1}
     ]
   },
-  "vitaminB3":{
+  "vitamin B3":{
      "title":"Vitamin B3 - Niacin",
      "description": "Vitamin Description Goes here",
      "recommendedIntakes":{
@@ -408,7 +408,7 @@
     {"source":8, "target":9, "bond": 1}
     ]
   },
-  "vitaminB5":{
+  "vitamin B5":{
      "title":"Vitamin B5 - Pantothenic Acid",
      "description": "Vitamin Description Goes here",
      "recommendedIntakes":{
@@ -502,7 +502,7 @@
     {"source":24, "target":25, "bond": 1}
     ]
   },
-  "vitaminB6":{
+  "vitamin B6":{
      "title":"Vitamin B6 - Pyridoxine",
      "description": "Vitamin Description Goes here",
      "recommendedIntakes":{
@@ -582,7 +582,7 @@
         {"source":14, "target":25, "bond": 1}
     ]
   },
-  "vitaminB7":{
+  "vitamin B7":{
      "title":"Vitamin B7 - Biotin",
      "description": "Vitamin Description Goes here",
      "recommendedIntakes":{
@@ -674,7 +674,7 @@
       {"source":15, "target":31, "bond":1}
     ]
   },
-  "vitaminB9":{
+  "vitamin B9":{
      "title":"Vitamin B9 - Folate",
      "description": "Vitamin Description Goes here",
      "recommendedIntakes":{
@@ -807,7 +807,7 @@
         {"source":19, "target":50, "bond":1}
     ]
   },
-  "vitaminB12":{
+  "vitamin B12":{
      "title":"Vitamin B12 - cyanocobalamine",
      "description": "Vitamin Description Goes here",
      "recommendedIntakes":{
@@ -1205,7 +1205,7 @@
         {"source":136, "target":179, "bond": 1}
      ]
    },
-  "vitaminC":{
+  "vitamin C":{
      "title":"Vitamin C - Ascorbic Acid",
      "description": "Vitamin Description Goes here",
      "recommendedIntakes":{
@@ -1273,7 +1273,7 @@
       {"source":11, "target":19}
     ]
   },
-  "vitaminD":{
+  "vitamin D":{
      "title":"Vitamin D - Cholecalciferol",
      "description": "Vitamin Description Goes here",
      "recommendedIntakes":{
@@ -1448,7 +1448,7 @@
         {"source":27, "target":71, "bond": 1}
     ]
   },
-  "vitaminE":{
+  "vitamin E":{
      "title":"Vitamin E - Tocopherol",
      "description": "Vitamin Description Goes here",
      "recommendedIntakes":{
@@ -1640,7 +1640,7 @@
         {"source":1, "target":36, "bond": 1}
     ]
   },
-  "vitaminK":{
+  "vitamin K":{
      "title":"Vitamin K - phylloquinone",
      "description": "Vitamin Description Goes here",
      "recommendedIntakes":{
