@@ -1,18 +1,68 @@
+
+body {
+    background-color: rgba( 27, 31, 42, 1);
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    color: #929DAF;
+}
+
+.panel {
+    background-color: rgba( 30, 80, 120, 0.3 );
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 0px #06060d;
+}
+
+h1{
+    background-color: #29384D;
+    height:85px;
+    color:#929DAF;
+    text-align: center;
+    line-height: 90px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-weight: 400px;
+    font-size: 3em;
+    text-shadow: 4px 4px #06060d;
+    margin-top:0px;
+}
+h3{
+    background-color: #29384D;
+    height:85px;
+    color:#929DAF;
+    text-align: center;
+    line-height: 90px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-weight: 400px;
+    font-size: 3em;
+    text-shadow: 4px 4px #06060d;
+    margin-top:0px;
+}
+p{
+ font-size: 2em;
+ padding-left: 70px;
+ padding-right: 70px;
+}
+
+
+
 .container{
- display: flex;
- flex-grow: 1;
+/*  display: flex; */
+/*  flex-grow: 1; */
 }
 
 .vitamin{
   display: inline-block;
   width: 55vw;
   height: 100vh;
-  margin: 10px;
+  margin-left: 45px;
+  margin-top: 45px;
   float: left;
 }
 
 .structure{
-  background:black;
   border: 1px solid black;
   width: 100%;
   height: 60%;
@@ -39,39 +89,38 @@
 }
 
 .description{
-  border: 1px solid black;
   width: 100%;
   height: 30%;
-  margin-top: 15px;
+  margin-top: 40px;
 }
 
 .graphs{
   display: inline-block;
-  width: 40vw;
+  width: 38vw;
   height: 100vh;
-  margin: 10px;
+  margin-top: 45px;
+  margin-left: 45px;
 }
 
 .chart{
-  border: 1px solid black;
   width: 100%;
   height: 50%;
-  margin-bottom: 15px;
 }
 
 .donutGraph{
   display: inline-block;
-  border: 1px solid black;
-  width: 65%;
+  width: 60%;
   height: 40%;
+  margin-top:45px;
+  float: left;
 }
 .controls{
   display:inline-block;
-  border: 1px solid black;
-  width: 30%;
+  width: 35%;
   height: 40%;
+  margin-top: 45px;
+  margin-left: 45px;
 }
-
 
 svg{
  width:100%;
@@ -79,7 +128,7 @@ svg{
 }
 
 .chart .legend {
-  fill: black;
+  fill: #929DAF;
   font: 14px sans-serif;
   text-anchor: start;
   font-size: 18px;
@@ -92,7 +141,7 @@ svg{
 }
 
 .chart .label {
-  fill: black;
+  fill: #929DAF;
   font: 22px sans-serif;
   font-weight: bold;
   text-anchor: end;
@@ -114,5 +163,10 @@ svg{
  height:100%;
 }
 
+
+.shadow {
+    -webkit-filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.5) );
+    filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.5) );
+}
 
 

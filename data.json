@@ -1,7 +1,7 @@
 {
  "vitamin A":{
      "title":"Vitamin A - Retinol",
-     "description": "Vitamin Description Goes here",
+     "description": "Vitamin A is a fat soluble vitamin that is also a powerful antioxidant. Vitamin A plays a critical role in maintaining healthy vision, neurological function, healthy skin, and more. Vitamin A- like all antioxidants- is involved in reducing inflammation through fighting free radical damage. Consuming a diet high in antioxidants is a way to naturally slow aging. Vitamin A is found in two primary forms: active Vitamin A and beta carotene. Active Vitamin A comes from animal-derived foods and is called retinol.",
      "recommendedIntakes":{
         "adults":{
           "labels": ["9-13 yrs", "14-18 yrs", "19-30 yrs", "31-50 yrs", "51-70 yrs", "70+ yrs"],
