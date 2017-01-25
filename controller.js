@@ -9,18 +9,18 @@ var intakeList = []; //for dropdown
 var vitaminList = []; //for dropdown
 
   //populating intakeList for dropdown
-  for (var key in vitamin.recommendedIntakes){
-    intakeList.push(key);
-  }
 
   //populating vitaminList for dropdown
   for (var key in data){
     vitaminList.push(key);
   }
+  for (var key in vitamin.recommendedIntakes){
+    intakeList.push(key);
+  }
 
  var updateChart = function() {
     console.log("Update Chart being called");
-    var intakeSelection = document.getElementById("dropdown").value;
+    var intakeSelection = document.getElementById("intakedropdown").value;
     var vitaminSelection = document.getElementById("vitamindropdown").value;
     var chart = d3.select(".chart svg");
     //remove from page
@@ -29,11 +29,11 @@ var vitaminList = []; //for dropdown
     renderChart(vitaminSelection, intakeSelection);
  };
 
-  // dropdown selector for intakes
   var intakeSelector = d3.select("#intakedrop")
       .append("select")
-      .attr("id", "dropdown")
+      .attr("id", "intakedropdown")
       .on("change", updateChart);
+
 
   intakeSelector.selectAll( "option" )
         .data(intakeList)
@@ -43,7 +43,7 @@ var vitaminList = []; //for dropdown
 
  var updateLayout = function() {
     console.log("update layout being called");
-    var intakeSelection = document.getElementById("dropdown").value;
+    var intakeSelection = document.getElementById("intakedropdown").value;
     var vitaminSelection = document.getElementById("vitamindropdown").value;
     var chart = d3.select(".chart svg");
     var structure = d3.select(".structure svg");

@@ -8,12 +8,11 @@ d3.json("data.json", function(error, data){
 
   var labelsLength = demographic.labels.length;
   var seriesLength = demographic.series.length;
-  var chartWidth = 700;
+  var chartWidth = 600;
   var barHeight = 35;
   var gapBetweenGroups = 10;
 
-  // var groupHeight = 250; //480; //line down side of graph
-  var groupHeight = ((barHeight + gapBetweenGroups) * 2)  * labelsLength - 35;
+  var groupHeight = ((barHeight + gapBetweenGroups) * 2 )  * labelsLength - 35;
 
   var spaceForLabels = 150;
   var spaceForLegend = 150;
@@ -30,7 +29,6 @@ d3.json("data.json", function(error, data){
   // Color scale
   var color = d3.scale.category20();
   var chartHeight = (barHeight * dataSet.length) + (gapBetweenGroups * labelsLength);
-               // = 20 * 12 + 10 * 6 = 300;
 
   var x = d3.scale.linear()
       .domain([0, d3.max(dataSet)])
@@ -47,7 +45,9 @@ d3.json("data.json", function(error, data){
 
   // Specify the chart area and dimensions
   var chart = d3.select(".chart").append('svg')
-      .attr("viewBox", "0 0 "+ totalChartWidth + " "+ groupHeight)
+      .attr("viewBox", "10 60 "+ totalChartWidth+ " "+groupHeight)
+      // .attr("viewBox", "0 0 "+ totalChartWidth/0.5 + " "+ groupHeight/0.5)
+      .attr("preserveAspectRatio", "xMidYMid meet");
       // .attr("height", chartHeight);
 
   // Create bars
@@ -92,8 +92,8 @@ d3.json("data.json", function(error, data){
         .call(yAxis);
 
   // Draw legend
-  var legendRectSize = 18,
-      legendSpacing  = 4;
+  var legendRectSize = 26,
+      legendSpacing  = 6;
 
   var legend = chart.selectAll('.legend')
       .data(demographic.series)

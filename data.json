@@ -809,7 +809,7 @@
   },
   "vitamin B12":{
      "title":"Vitamin B12 - Cyanocobalamine",
-     "description": "Vitamin B12, sometimes also called cyanocobalamin, also helps with digestion and heart health, so a deficiency can lead to both digestive disorders and an increased risk for heart disease. Vitamin B12 deficiency is thought to be one of the leading nutrient deficiencies in the world, with a 2004 study showing that it’s a major health concern in many parts of the world, including the U.S, India, Mexico, Central America, South America and certain areas in Africa. Vitamin B12 benefits your mood, energy level, memory, heart, skin, hair, digestion and more. Vitamin B12 is also an essential vitamin for addressing adrenal fatigue, multiple metabolic functions — including enzyme production, DNA synthesis and hormonal balance — and maintaining healthy nervous and cardiovascular systems.",
+     "description": "Vitamin B12 benefits the central nervous system in many important ways: It helps maintain the health of nerve cells — including those needed for neurotransmitter signaling — and helps form the protective covering of nerves, called the cell’s myelin sheath. This means that when vitamin B12 levels are low, almost every cognitive function can suffer. Vitamin B12, sometimes also called cyanocobalamin, also helps with digestion and heart health, so a deficiency can lead to both digestive disorders and an increased risk for heart disease.",
      "recommendedIntakes":{
         "adults":{
           "labels": ["9-13 yrs", "14-18 yrs", "19-30 yrs", "31-50 yrs", "51-70 yrs", "70+ yrs"],
@@ -1207,7 +1207,7 @@
    },
   "vitamin C":{
      "title":"Vitamin C - Ascorbic Acid",
-     "description": "Vitamin C is a water-soluble vitamin that plays a role in maintaining the health of the body’s connective tissue as well as acting as an antioxidant. Your body needs to ingest vitamin C, vitamin C foods, on a daily basis in order to maintain necessary supplies. Your body does not make vitamin C on its own, and it does not store it either, so it is important that you include plenty of fruits and veggies that contain vitamin C in your daily diet. The benefits of vitamin C may include protection against immune system deficiencies, cardiovascular disease, prenatal health problems, eye disease, and even skin wrinkling. Because Vitamin C is not a vitamin that your body produces, it is very common to have a Vitamin C Deficiency.",
+     "description": "Vitamin C is a water-soluble vitamin that plays a role in maintaining the health of the body’s connective tissue as well as acting as an antioxidant. Your body needs to ingest vitamin C, vitamin C foods, on a daily basis in order to maintain necessary supplies. Your body does not make vitamin C on its own, and it does not store it either, so it is important that you include plenty of fruits and veggies that contain vitamin C in your daily diet. The benefits of vitamin C may include protection against immune system deficiencies, cardiovascular disease, prenatal health problems, eye disease, and even skin wrinkling.",
      "recommendedIntakes":{
         "adults":{
           "labels": ["9-13 yrs", "14-18 yrs", "19-30 yrs", "31-50 yrs", "51-70 yrs", "70+ yrs"],

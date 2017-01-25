@@ -23,7 +23,6 @@ var renderDonut = function() {
 
     var width = 500;
     var height = 650;
-    console.log("run");
     var outerRadiusArc = width/2;
     var innerRadiusArc = 100;
     var shadowWidth = 20;
@@ -46,7 +45,6 @@ var renderDonut = function() {
             // .attr("viewBox", "0 0 "+ width/2 + " "+ height/2);
 
             // .attr({ transform:'translate('+ width / 2 +','+ height / 2 +')' })
-
 
     var createChart = function( svg, outerRadius, innerRadius, fillFunction, className ){
 
@@ -84,6 +82,8 @@ var renderDonut = function() {
         return d3.hsl((c.h+5), (c.s -.07), (c.l -.15));
     },'path2');
 
+
+
     var addTextToCenter = function (text, y, size) {
         svg.append('text')
                 .text(text)
@@ -92,10 +92,8 @@ var renderDonut = function() {
     };
 
     var restOfTheData = function(){
-
         addTextToCenter(function(){ return "400"; } ,0, '40px');
-        addTextToCenter( function(){ return "ug/mg";  } ,25, '30px');
-
+        addTextToCenter(function(){ return "ug/mg";  } ,25, '30px');
     };
 
     setTimeout(restOfTheData,1000);
