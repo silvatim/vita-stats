@@ -147,25 +147,6 @@ var vitamin = data[selectedVitamin] || data["vitamin A"];
     }
   }
 
-  // dropdown selector for Daily intakes
-  var intakeSelector = d3.select("#intakedrop")
-      .append("select")
-      .attr("id", "dropdown")
-      .on("change", function(d){
-         intakeSelection = document.getElementById("dropdown");
-         chart.remove("svg");
-        //need to write a page to re-render chart div
-        //renderChart();
-
-  });
-
-  intakeSelector.selectAll( "option" )
-        .data(intakeList)
-        .enter().append( "option" )
-        .attr( "value", function( d ){ return d; } )
-        .text( function( d ){ return d; } );
-
-
   // Color scale
   var color = d3.scale.category20();
   var chartHeight = (barHeight * dataSet.length) + (gapBetweenGroups * labelsLength);
@@ -351,6 +332,26 @@ var vitamin = data[selectedVitamin] || data["vitamin A"];
 
 
  };
+
+  // dropdown selector for Daily intakes
+  var intakeSelector = d3.select("#intakedrop")
+      .append("select")
+      .attr("id", "dropdown")
+      .on("change", function(d){
+         intakeSelection = document.getElementById("dropdown");
+         chart.remove("svg");
+        //need to write a page to re-render chart div
+        //renderChart();
+
+  });
+
+  intakeSelector.selectAll( "option" )
+        .data(intakeList)
+        .enter().append( "option" )
+        .attr( "value", function( d ){ return d; } )
+        .text( function( d ){ return d; } );
+
+
 
   renderDonut();
   renderStructure();
