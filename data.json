@@ -131,8 +131,8 @@
   },
    "vitamin B1":{
      "title":"Vitamin B1 - Thiamine",
-     "description": "Vitamin Description Goes here",
-     "recommendedIntakes":{
+     "description": "Thiamin is a water-soluble vitamin that occurs in free or phosphorylated forms in most plant and animal tissue. It plays an essential role in the supply of energy to the tissue, in carbohydrate metabolism and in the metabolic links between carbohydrate, protein and fat metabolism.A thiamine deficiency can cause weakness, chronic fatigue, heart complications, psychosis, and nerve damage. Thiamine can be found in many commonly eaten foods including yeasts, certain whole grains, beans, nuts, and meat.  Additionally it is included in many vitamin B complex supplement product.",
+    "recommendedIntakes":{
         "adults":{
           "labels": ["9-13 yrs", "14-18 yrs", "19-30 yrs", "31-50 yrs", "51-70 yrs", "70+ yrs"],
           "series": [
@@ -228,7 +228,7 @@
   },
  "vitamin B2":{
      "title":"Vitamin B2 - Riboflavin",
-     "description": "Vitamin Description Goes here",
+     "description": "Vitamin B2, also called Riboflavin, is an important vitamin that acts as an antioxidant within the body. Vitamin B2 is responsible for maintaining healthy blood cells, helping to boost energy levels, facilitating in a healthy metabolism, preventing free radical damage, contributing to growth and protecting skin and eye health. Because it’s a water soluble vitamin like all B vitamins, Vitamin B2 must be obtained through a healthy diet and replenished often, ideally every day, in order to avoid a riboflavin deficiency.",
      "recommendedIntakes":{
         "adults":{
           "labels": ["9-13 yrs", "14-18 yrs", "19-30 yrs", "31-50 yrs", "51-70 yrs", "70+ yrs"],
@@ -354,7 +354,7 @@
   },
   "vitamin B3":{
      "title":"Vitamin B3 - Niacin",
-     "description": "Vitamin Description Goes here",
+     "description": "Vitamin B3, which is usually medically referred to as niacin, comes in 3 forms: nicotinic acid, Niacinamide and Inositol Hexaniacinate. Vitamin B3 niacin has been studied extensively and shows positive results treating a wide range of many commonly occurring health problems. Niacin is an important vitamin for maintaining a healthy cardiovascular system and metabolism- especially balancing blood cholesterol levels. In addition niacin helps with brain function, healthy skin formation and maintenance and even preventing or treating diabetes.",
      "recommendedIntakes":{
         "adults":{
           "labels": ["9-13 yrs", "14-18 yrs", "19-30 yrs", "31-50 yrs", "51-70 yrs", "70+ yrs"],
@@ -410,7 +410,7 @@
   },
   "vitamin B5":{
      "title":"Vitamin B5 - Pantothenic Acid",
-     "description": "Vitamin Description Goes here",
+     "description": "Vitamin B5, also known as pantothenic acid, is a water-soluble vitamin that is found in all living cells within the body. Studies have shown that there are plenty of important B5 vitamin roles within the body, such as converting nutrients from food into energy, balancing blood sugar, reducing bad cholesterol, lowering high blood pressure, preventing nerve damage and pain, and preventing heart failure. B5 vitamin sources include both plants and animals foods such as meat, organ meat, beans and legumes, certain nuts and seeds, raw milk, and eggs.",
      "recommendedIntakes":{
         "adults":{
           "labels": ["9-13 yrs", "14-18 yrs", "19-30 yrs", "31-50 yrs", "51-70 yrs", "70+ yrs"],
@@ -504,7 +504,7 @@
   },
   "vitamin B6":{
      "title":"Vitamin B6 - Pyridoxine",
-     "description": "Vitamin Description Goes here",
+     "description": "Vitamin B6 has several derivatives, including pyridoxal, pyridoxal 5-phosphate and pyridoxamine. These are all important compounds involved in numerous biological functions. Vitamin B6 is used by the body every single day since it plays a part in such major functions including movement, memory, energy expenditure and blood flow. Therefore, a vitamin B6 deficiency can show up in many different symptoms, some only temporary but others more serious.",
      "recommendedIntakes":{
         "adults":{
           "labels": ["9-13 yrs", "14-18 yrs", "19-30 yrs", "31-50 yrs", "51-70 yrs", "70+ yrs"],
@@ -584,7 +584,7 @@
   },
   "vitamin B7":{
      "title":"Vitamin B7 - Biotin",
-     "description": "Vitamin Description Goes here",
+     "description": "Biotin, or Vitamin B7, is a water-soluble vitamin that’s a part of the vitamin B complex. Biotin acts as a coenzyme in the body that’s needed for the metabolism of fatty acids, amino acids and glucose. This means that when we eat foods that are sources of fats, proteins and carbohydrates, vitamin B7 biotin must be present in order to convert and use these macronutrients for bodily energy, to carry out physical activities and for proper psychological functioning. Biotin can be found in foods like organ meats, eggs, avocado, cauliflower, berries, fish, legumes and mushrooms.",
      "recommendedIntakes":{
         "adults":{
           "labels": ["9-13 yrs", "14-18 yrs", "19-30 yrs", "31-50 yrs", "51-70 yrs", "70+ yrs"],
@@ -660,8 +660,8 @@
       {"source":8, "target":9, "bond":1},
       {"source":8, "target":23, "bond":1},
       {"source":8, "target":24, "bond":1},
-      {"source":9, "target":10, "bond":2},
-      {"source":10, "target":11, "bond":1},
+      {"source":9, "target":11, "bond":1},
+      {"source":10, "target":9, "bond":2},
       {"source":11, "target":22, "bond":1},
       {"source":4, "target":12, "bond":1},
       {"source":12, "target":13, "bond":1},
@@ -676,7 +676,7 @@
   },
   "vitamin B9":{
      "title":"Vitamin B9 - Folate",
-     "description": "Vitamin Description Goes here",
+     "description": "Folate is also considered a B-vitamin and is water soluble, but plays a slightly different role from the other B-vitamins in that it doesn’t participate in energy metabolism. Folate primarily helps the body make new cells, specifically by playing a role in copying and synthesizing DNA. It also helps the body utilize vitamin B12 and amino acids. A folate deficiency will cause anemia (poorly formed red blood cells), poor immune function, and poor digestion. For pregnant women a deficiency in folate can lead to neural tube defects such as spina bifida.",
      "recommendedIntakes":{
         "adults":{
           "labels": ["9-13 yrs", "14-18 yrs", "19-30 yrs", "31-50 yrs", "51-70 yrs", "70+ yrs"],
@@ -808,8 +808,8 @@
     ]
   },
   "vitamin B12":{
-     "title":"Vitamin B12 - cyanocobalamine",
-     "description": "Vitamin Description Goes here",
+     "title":"Vitamin B12 - Cyanocobalamine",
+     "description": "Vitamin B12, sometimes also called cyanocobalamin, also helps with digestion and heart health, so a deficiency can lead to both digestive disorders and an increased risk for heart disease. Vitamin B12 deficiency is thought to be one of the leading nutrient deficiencies in the world, with a 2004 study showing that it’s a major health concern in many parts of the world, including the U.S, India, Mexico, Central America, South America and certain areas in Africa. Vitamin B12 benefits your mood, energy level, memory, heart, skin, hair, digestion and more. Vitamin B12 is also an essential vitamin for addressing adrenal fatigue, multiple metabolic functions — including enzyme production, DNA synthesis and hormonal balance — and maintaining healthy nervous and cardiovascular systems.",
      "recommendedIntakes":{
         "adults":{
           "labels": ["9-13 yrs", "14-18 yrs", "19-30 yrs", "31-50 yrs", "51-70 yrs", "70+ yrs"],
@@ -1207,7 +1207,7 @@
    },
   "vitamin C":{
      "title":"Vitamin C - Ascorbic Acid",
-     "description": "Vitamin Description Goes here",
+     "description": "Vitamin C is a water-soluble vitamin that plays a role in maintaining the health of the body’s connective tissue as well as acting as an antioxidant. Your body needs to ingest vitamin C, vitamin C foods, on a daily basis in order to maintain necessary supplies. Your body does not make vitamin C on its own, and it does not store it either, so it is important that you include plenty of fruits and veggies that contain vitamin C in your daily diet. The benefits of vitamin C may include protection against immune system deficiencies, cardiovascular disease, prenatal health problems, eye disease, and even skin wrinkling. Because Vitamin C is not a vitamin that your body produces, it is very common to have a Vitamin C Deficiency.",
      "recommendedIntakes":{
         "adults":{
           "labels": ["9-13 yrs", "14-18 yrs", "19-30 yrs", "31-50 yrs", "51-70 yrs", "70+ yrs"],
@@ -1275,7 +1275,7 @@
   },
   "vitamin D":{
      "title":"Vitamin D - Cholecalciferol",
-     "description": "Vitamin Description Goes here",
+     "description": "Vitamin D is a fat soluble vitamin that is stored in the liver and fatty tissues. This means that increased body fat has the ability to absorb Vitamin D and keep it from being used within our body. Vitamin D is somewhat different than other vitamins because our body makes most of our Vitamin D on its own, rather than solely relying on food sources. The way that our bodies make Vitamin D is to convert sunshine into chemicals that are used by the body. The cholesterol in our skin converts “previtamin D” and makes it into usable vitamin D3.",
      "recommendedIntakes":{
         "adults":{
           "labels": ["9-13 yrs", "14-18 yrs", "19-30 yrs", "31-50 yrs", "51-70 yrs", "70+ yrs"],
@@ -1450,7 +1450,7 @@
   },
   "vitamin E":{
      "title":"Vitamin E - Tocopherol",
-     "description": "Vitamin Description Goes here",
+     "description": "Vitamin E is a fat-soluble vitamin, which plays a role as an antioxidant in the body. It also helps to prevent free radical damage to specific fats in the body that are critical for your health. Vitamin E is an important vitamin that is required for the proper function of many organs in the body and is extremely useful in naturally slowing aging. It is found in many foods including certain oils, nuts, poultry, eggs, fruits and wheat germ oil.",
      "recommendedIntakes":{
         "adults":{
           "labels": ["9-13 yrs", "14-18 yrs", "19-30 yrs", "31-50 yrs", "51-70 yrs", "70+ yrs"],
@@ -1641,8 +1641,8 @@
     ]
   },
   "vitamin K":{
-     "title":"Vitamin K - phylloquinone",
-     "description": "Vitamin Description Goes here",
+     "title":"Vitamin K - Phylloquinone",
+     "description": "Vitamin K is an essential fat-soluble vitamin that plays an important role in bone and heart health. It is one of the main vitamins involved in bone mineralization and blood clotting, but also helps to maintain brain function, a healthy metabolism, and to protect against cancer. Vitamin K is most well known for being responsible for bone building and blood clotting. Blood would not clot without vitamin K because the vitamin activates the protein that is responsible for forming clots within the blood.",
      "recommendedIntakes":{
         "adults":{
           "labels": ["9-13 yrs", "14-18 yrs", "19-30 yrs", "31-50 yrs", "51-70 yrs", "70+ yrs"],
@@ -1828,4 +1828,3 @@
     ]
   }
 }
-

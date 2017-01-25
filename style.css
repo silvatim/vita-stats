@@ -46,8 +46,6 @@ p{
  padding-right: 70px;
 }
 
-
-
 .container{
 /*  display: flex; */
 /*  flex-grow: 1; */
@@ -116,7 +114,7 @@ p{
 }
 .controls{
   display:inline-block;
-  width: 35%;
+  width: 36%;
   height: 40%;
   margin-top: 45px;
   margin-left: 45px;
