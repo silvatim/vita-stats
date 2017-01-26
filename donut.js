@@ -5,95 +5,95 @@ var renderDonut = function() {
 
 var vitamins = {
   "vitamin A": [ //mcg
-    { name: 'Carrots', amount: 852 },
-    { name: 'Spinach', amount: 500 },
-    { name: 'Sweet Potato', amount: 961 },
-    { name: 'Kale', amount: 550 },
-    { name: 'Tuna', amount: 757 }
+    { name: 'Carrots', amount: 852, unit:"mcg" },
+    { name: 'Spinach', amount: 500, unit:"mcg" },
+    { name: 'Sweet Potato', amount: 961, unit:"mcg" },
+    { name: 'Kale', amount: 550, unit:"mcg" },
+    { name: 'Tuna', amount: 757, unit:"mcg" }
     ],
   "vitamin B1": [ //mg
-    { name: 'Pork', amount: 1.1 },
-    { name: 'Bread', amount: 0.5 },
-    { name: 'Seeds', amount: 1.5 },
-    { name: 'Trout', amount: 0.4 },
-    { name: 'Beans', amount: 0.2 }
+    { name: 'Pork', amount: 1.1, unit:"mg" },
+    { name: 'Bread', amount: 0.5, unit:"mg" },
+    { name: 'Seeds', amount: 1.5, unit:"mg" },
+    { name: 'Trout', amount: 0.4, unit:"mg" },
+    { name: 'Beans', amount: 0.2, unit:"mg" }
     ],
   "vitamin B2": [ //mg
-    { name: 'Almonds', amount: 1.1 },
-    { name: 'Egg', amount: 0.5},
-    { name: 'Beef', amount: 0.9 },
-    { name: 'Mushrooms', amount: 0.5 },
-    { name: 'Cheese', amount: 1.4 }
+    { name: 'Almonds', amount: 1.1, unit:"mg" },
+    { name: 'Egg', amount: 0.5, unit:"mg"},
+    { name: 'Beef', amount: 0.9, unit:"mg" },
+    { name: 'Mushrooms', amount: 0.5, unit:"mg" },
+    { name: 'Cheese', amount: 1.4, unit:"mg" }
     ],
   "vitamin B3": [ //mg
-    { name: 'Chicken', amount: 15 },
-    { name: 'Peas', amount: 2 }
-    { name: 'Peanuts', amount: 14 },
-    { name: 'Beef', amount: 9 },
-    { name: 'Avocado', amount: 2 },
+    { name: 'Chicken', amount: 15, unit:"mg" },
+    { name: 'Peas', amount: 2, unit:"mg" },
+    { name: 'Peanuts', amount: 14, unit:"mg" },
+    { name: 'Beef', amount: 9, unit:"mg" },
+    { name: 'Avocado', amount: 2, unit:"mg" },
     ],
   "vitamin B5": [ //mg
-    { name: 'Cheese', amount: 3.3 },
-    { name: 'Pork', amount: 1.6 },
-    { name: 'Mushroom', amount: 3.6 },
-    { name: 'Trout', amount: 2.2 },
-    { name: 'Egg', amount: 1.5 }
+    { name: 'Cheese', amount: 3.3, unit:"mg" },
+    { name: 'Pork', amount: 1.6, unit:"mg" },
+    { name: 'Mushroom', amount: 3.6, unit:"mg" },
+    { name: 'Trout', amount: 2.2, unit:"mg" },
+    { name: 'Egg', amount: 1.5, unit:"mg" }
     ],
   "vitamin B6": [//mcg
-    { name: 'Banana', amount: 0.4 },
-    { name: 'Turkey', amount: 0.8 },
-    { name: 'Garlic', amount: 1.2 },
-    { name: 'Salmon', amount: 0.6 },
-    { name: 'Chicken', amount: 0.5 }
+    { name: 'Banana', amount: 0.4, unit:"mcg" },
+    { name: 'Turkey', amount: 0.8, unit:"mcg" },
+    { name: 'Garlic', amount: 1.2, unit:"mcg" },
+    { name: 'Salmon', amount: 0.6, unit:"mcg" },
+    { name: 'Chicken', amount: 0.5, unit:"mcg" }
     ],
   "vitamin B7": [ //mcg
-    { name: 'Egg', amount: 25 },
-    { name: 'Califlower', amount: 17 },
-    { name: 'Mushrooms', amount: 16 },
-    { name: 'Peas', amount: 18 },
-    { name: 'Peanuts', amount: 39 }
+    { name: 'Egg', amount: 25, unit:"mcg" },
+    { name: 'Califlower', amount: 17, unit:"mcg" },
+    { name: 'Mushrooms', amount: 16, unit:"mcg" },
+    { name: 'Peas', amount: 18, unit:"mcg" },
+    { name: 'Peanuts', amount: 39, unit:"mcg" }
     ],
   "vitamin B9": [ //mcg
-    { name: 'Oranges', amount: 39 },
-    { name: 'Spinach', amount: 194 },
-    { name: 'Lentils', amount: 181 },
-    { name: 'Broccoli', amount: 108 },
-    { name: 'Beans', amount: 209 }
+    { name: 'Oranges', amount: 39, unit:"mcg" },
+    { name: 'Spinach', amount: 194, unit:"mcg" },
+    { name: 'Lentils', amount: 181, unit:"mcg" },
+    { name: 'Broccoli', amount: 108, unit:"mcg" },
+    { name: 'Beans', amount: 209, unit:"mcg" }
     ],
   "vitamin B12": [ //mcg
-    { name: 'Liver', amount: 70 },
-    { name: 'Cheese', amount: 3 },
-    { name: 'Cereals', amount: 20 },
-    { name: 'Shellfish', amount: 98},
-    { name: 'Egg', amount: 2 }
+    { name: 'Liver', amount: 70, unit:"mcg" },
+    { name: 'Cheese', amount: 3, unit:"mcg" },
+    { name: 'Cereals', amount: 20, unit:"mcg" },
+    { name: 'Shellfish', amount: 98, unit:"mcg"},
+    { name: 'Egg', amount: 2, unit:"mcg" }
     ],
   "vitamin C": [ //mg
-    { name: 'Oranges', amount: 59},
-    { name: 'Kale', amount: 120 },
-    { name: 'Kiwi', amount: 93 },
-    { name: 'Broccoli', amount: 89},
-    { name: 'Capsicum', amount: 128 }
+    { name: 'Kale', amount: 120, unit:"mcg" },
+    { name: 'Capsicum', amount: 128, unit:"mcg" },
+    { name: 'Broccoli', amount: 89, unit:"mcg"},
+    { name: 'Kiwi', amount: 93, unit:"mcg" },
+    { name: 'Oranges', amount: 59, unit:"mcg"}
     ],
   "vitamin D": [ //mcg
-    { name: 'Salmon', amount: 19 },
-    { name: 'Egg', amount: 2 },
-    { name: 'Mushrooms', amount: 28 },
-    { name: 'Cereals', amount: 8 },
-    { name: 'Tofu', amount: 4 }
+    { name: 'Salmon', amount: 19, unit:"mcg" },
+    { name: 'Egg', amount: 2, unit:"mcg"  },
+    { name: 'Mushrooms', amount: 28, unit:"mcg"  },
+    { name: 'Cereals', amount: 8, unit:"mcg"  },
+    { name: 'Tofu', amount: 4, unit:"mcg"  }
     ],
   "vitamin E": [ //mg
-    { name: 'Almonds', amount: 26 },
-    { name: 'Spinach', amount: 2 },
-    { name: 'Kiwi', amount: 1.5 },
-    { name: 'Pumpkin', amount: 1 },
-    { name: 'Avocado', amount: 2 }
+    { name: 'Almonds', amount: 26, unit:"mg"  },
+    { name: 'Spinach', amount: 2, unit:"mg"  },
+    { name: 'Kiwi', amount: 1.5, unit:"mg"  },
+    { name: 'Pumpkin', amount: 1, unit:"mg"  },
+    { name: 'Avocado', amount: 2, unit:"mg"  }
     ],
   "vitamin K": [ //mcg
-    { name: 'Sprouts', amount: 177 },
-    { name: 'Asparagus', amount: 41 },
-    { name: 'Spinach', amount: 483 },
-    { name: 'Kale', amount: 704 },
-    { name: 'Broccoli', amount: 102 }
+    { name: 'Sprouts', amount: 177, unit:"mg"  },
+    { name: 'Asparagus', amount: 41, unit:"mg"  },
+    { name: 'Spinach', amount: 483, unit:"mg"  },
+    { name: 'Kale', amount: 704, unit:"mg"  },
+    { name: 'Broccoli', amount: 102, unit:"mg"  }
     ]
 };
 var pie = d3.layout.pie()
@@ -121,7 +121,7 @@ var svg = d3.select(".donutGraph")
   .attr({transform:'translate('+w/1.6+','+h/2+')'});
 
 var path = svg.selectAll('path')
-  .data(pie(vitamins["vitamin C"]))
+  .data(pie(vitamins["vitamin B5"]))
   .enter()
   .append('path')
   .attr({ d:arc, fill:function(d,i){ return color(d.data.name); } });
@@ -138,7 +138,7 @@ path.transition()
 
 var restOfTheData=function(){
     var text = svg.selectAll('text')
-        .data(pie(vitamins["vitamin C"]))
+        .data(pie(vitamins["vitamin B5"]))
         .enter()
         .append("text")
         .transition()
@@ -147,7 +147,7 @@ var restOfTheData=function(){
         .attr("dy", ".4em")
         .attr("text-anchor", "middle")
         .text(function(d){
-            return d.data.amount+"gms";
+            return d.data.amount+" "+d.data.unit;
         })
         .style({ fill:'#fff', 'font-size':'10px'});
 
