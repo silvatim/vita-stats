@@ -8,12 +8,11 @@ var donut = d3.select(".donutGraph svg");
 var intakeList = []; //for dropdown
 var vitaminList = []; //for dropdown
 
-  //populating intakeList for dropdown
-
   //populating vitaminList for dropdown
   for (var key in data){
     vitaminList.push(key);
   }
+  //populating intakeList for dropdown
   for (var key in vitamin.recommendedIntakes){
     intakeList.push(key);
   }

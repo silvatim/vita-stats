@@ -1,15 +1,13 @@
-
 var renderStructure = function(selectedVitamin){
 
    d3.json("data.json", function(error, data){
-   console.log(data);
 
   var vitamin = data[selectedVitamin] || data["vitamin A"];
   var nodes = vitamin.nodes;
   var links = vitamin.links;
   var width = 840;
   var height = 495;
-  var color = d3.scale.category20();
+  var color = d3.scale.category10();
   var radius = d3.scale.sqrt()
       .range([0, 2]);
 
@@ -19,8 +17,6 @@ var renderStructure = function(selectedVitamin){
 
   var force = d3.layout.force()
       .size([width,height])
-      //.nodes(nodes)
-      // .links(links)
       .charge(-200)
       .linkDistance(function(d) { return radius(d.source.size) + radius(d.target.size) + 10; });
 
@@ -53,8 +49,6 @@ var renderStructure = function(selectedVitamin){
   node.append("circle")
       .attr("r", function(d) { return radius(d.size) })
       .attr("fill", function(d) { return color(d.atom); });
-      // .attr("stroke", "black")
-      // .attr("stroke-width", 2);
 
   node.append("text")
       .attr("dy", ".35em")

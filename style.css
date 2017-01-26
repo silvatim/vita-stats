@@ -161,7 +161,29 @@ svg{
     filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.5) );
 }
 
-.donutGraph text{
-  font-size:2px;
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
 }
 
+.controls p{
+  text-align: center;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+select {
+   margin: 10px;
+   border: 1px solid #111;
+   background: #929DAF;
+   background: url(down_arrow_select.jpg) no-repeat right #ddd;
+   width: 120px;
+   padding: 5px 15px 5px 5px;
+   font-size: 16px;
+   border: 1px solid #ccc;
+   height: 34px;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
