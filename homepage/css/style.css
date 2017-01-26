@@ -5,17 +5,13 @@ body{
 
 .panel {
     background-color: rgba( 28, 46, 66, 0.8);
-    width: 430px;
+    width: 400px;
     height: 400px;
     border: 1px solid rgba( 41, 56, 77, 0.8);
     border-radius: 20px;
-    box-shadow: 0px 0px 20px 0px #06060d;
-    position:absolute;
-    margin: 0 auto;
-    top: 20%;
-    left: 30%;
-    margin: 0 auto;
-    z-index:99;
+    box-shadow: 2px 2px 20px 2px #06060d;
+    position:relative;
+    margin: 150px auto;
 }
 
 h1{
@@ -28,7 +24,7 @@ h1{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     font-weight: 200px;
-    font-size: 2.5vw;
+    font-size: 40px;
     text-shadow: 1px 1px #06060d;
     margin-top:0px;
     margin-bottom:0px;
@@ -36,98 +32,39 @@ h1{
 
 p{
  color:#929DAF;
- font-size: 1.4vw;
- padding-left: 60px;
- padding-right: 60px;
- padding-top: 20px;
+ font-size: 25px;;
+ padding-left: 65px;
+ padding-right: 20px;
+ padding-top: 10px;
+/*  text-align:center; */
 }
 
 ul{
  color:#929DAF;
- font-size: 1.2vw;
+ font-size: 18px;
  padding-left: 80px;
  padding-right: 60px;
+ margin-bottom: 50px;
 }
 li{
   padding: 5px;
-}
-
-
-.animate
-{
-	transition: all 0.1s;
-	-webkit-transition: all 0.1s;
 }
 
 .button
 {
 	position: relative;
 	padding: 10px 40px;
-  float: left;
-  margin: 0 auto;
+  /* float: left; */
+  /* margin-left: 130px; */
+  margin-left: 33%;
 	border-radius: 8px;
 	font-size: 20px;
 	color: #FFF;
 	text-decoration: none;
 	background-color: rgba( 41, 56, 77, 1);
-  border:1px solid black;
+  border:1px solid rgba( 41, 53, 58, 1);
 	border-bottom: 5px solid rgba( 28, 46, 66, 1);
 	text-shadow: 0px -2px black;
 }
 
 
-$duration: .20;
-$easing: ease-in-out;
-
-[data-wipe] {
-  display: inline-block;
-  padding: 12px 18px;
-  text-decoration: none;
-  position: relative;
-  border: 2px solid #445561;
-  border-radius: 3px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-align: left;
-  color: #445561;
-  overflow: hidden;
-
-  &:before, &:after {
-    content: attr(data-wipe);
-    padding-top: inherit;
-    padding-bottom: inherit;
-    white-space: nowrap;
-    position: absolute;
-    top: 0;
-    overflow: hidden;
-    color: #F1F1F2;
-    background: #445561;
-  }
-
-  &:before {
-    left: 0;
-    text-indent: 18px;
-    width: 0;
-  }
-
-  &:after {
-    padding-left: inherit;
-    padding-right: inherit;
-    left: 100%;
-    text-indent: calc(-100% - 36px);
-    transition: $duration + s $easing;
-  }
-
-  &:hover {
-    &:before {
-      width: 100%;
-      transition: width $duration + s $easing;
-    }
-
-    &:after {
-      left: 0;
-      text-indent: 0;
-      transition: 0s $duration + s $easing;
-    }
-  }
-}

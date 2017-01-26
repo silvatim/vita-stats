@@ -8,8 +8,7 @@ var renderStructure = function(selectedVitamin){
   var width = 840;
   var height = 495;
   var color = d3.scale.category10();
-  var radius = d3.scale.sqrt()
-      .range([0, 2]);
+  var radius = d3.scale.sqrt().range([0, 2]);
 
   var vitaminStructure = d3.select(".structure").append("svg")
       .attr("viewBox", "0 0 "+ width + " "+ height)
