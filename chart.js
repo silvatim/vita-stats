@@ -8,7 +8,7 @@ d3.json("data.json", function(error, data){
 
   var labelsLength = demographic.labels.length;
   var seriesLength = demographic.series.length;
-  var chartWidth = 600;
+  var chartWidth = 700;
   var barHeight = 35;
   var gapBetweenGroups = 10;
 
@@ -46,9 +46,7 @@ d3.json("data.json", function(error, data){
   // Specify the chart area and dimensions
   var chart = d3.select(".chart").append('svg')
       .attr("viewBox", "10 60 "+ totalChartWidth+ " "+groupHeight)
-      // .attr("viewBox", "0 0 "+ totalChartWidth/0.5 + " "+ groupHeight/0.5)
       .attr("preserveAspectRatio", "xMidYMid meet");
-      // .attr("height", chartHeight);
 
   // Create bars
   var bar = chart.selectAll("g")
