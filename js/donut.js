@@ -11,9 +11,8 @@ var pie = d3.layout.pie()
   .sort(null)
   .padAngle(.03);
 
- var w=270;
-//  var h=300;
- var h=270;
+var w=270;
+var h=270;
 
 var outerRadius = w/2 ;
 var innerRadius = 80;
@@ -87,9 +86,6 @@ var restOfTheData=function(){
         .style({ fill:'#929DAF', 'font-size':'14px' }); };
 
 setTimeout(restOfTheData,1000);
-
-
-  //   var color = d3.scale.ordinal().range(['#41B787', '#6352B9', '#B65480', '#D5735A', '#D7D9DA']);
 
  });
 

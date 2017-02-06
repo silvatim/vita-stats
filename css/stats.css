@@ -177,7 +177,7 @@ select {
    margin: 10px;
    border: 1px solid #111;
    background: #929DAF;
-   background: url(down_arrow_select.jpg) no-repeat right #ddd;
+   background: url('../img/down_arrow_select.jpg') no-repeat right #ddd;
    width: 120px;
    padding: 5px 15px 5px 5px;
    font-size: 16px;
