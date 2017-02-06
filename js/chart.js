@@ -1,122 +1,136 @@
-
 var renderChart = function(selectedVitamin, selectedDemographic) {
+    //Getting json data
+    d3.json("data.json", function(error, data) {
 
-d3.json("data.json", function(error, data){
+        //Setting initial vitamin to Vitamin A if no vitamin selected
+        var vitamin = data[selectedVitamin] || data["vitamin A"];
+        var demographic = vitamin.recommendedIntakes[selectedDemographic] || vitamin.recommendedIntakes["adults"];
 
-  var vitamin = data[selectedVitamin] || data["vitamin A"];
-  var demographic = vitamin.recommendedIntakes[selectedDemographic] || vitamin.recommendedIntakes["adults"];
+        //Setting values for chart
+        var labelsLength = demographic.labels.length;
+        var seriesLength = demographic.series.length;
+        var chartWidth = 700;
+        var barHeight = 35;
+        var gapBetweenGroups = 10;
+        var groupHeight = ((barHeight + gapBetweenGroups) * 2) * labelsLength - 35;
+        var spaceForLabels = 150;
+        var spaceForLegend = 150;
+        var totalChartWidth = chartWidth + spaceForLabels + spaceForLegend;
 
-  var labelsLength = demographic.labels.length;
-  var seriesLength = demographic.series.length;
-  var chartWidth = 700;
-  var barHeight = 35;
-  var gapBetweenGroups = 10;
+        // Zip the series data together (first values, second values, etc.)
+        var dataSet = [];
+        for (var i = 0; i < labelsLength; i++) {
+            for (var j = 0; j < seriesLength; j++) {
+                dataSet.push(demographic.series[j].values[i]);
+            }
+        }
 
-  var groupHeight = ((barHeight + gapBetweenGroups) * 2 )  * labelsLength - 35;
+        // Color scale
+        var color = d3.scale.category20();
+        var chartHeight = (barHeight * dataSet.length) + (gapBetweenGroups * labelsLength);
 
-  var spaceForLabels = 150;
-  var spaceForLegend = 150;
-  var totalChartWidth = chartWidth + spaceForLabels + spaceForLegend;
+        var x = d3.scale.linear()
+            .domain([0, d3.max(dataSet)])
+            .range([0, chartWidth]);
 
-  // Zip the series data together (first values, second values, etc.)
-  var dataSet = [];
-  for (var i = 0; i < labelsLength; i++) {
-    for (var j = 0; j < seriesLength; j++) {
-      dataSet.push( demographic.series[j].values[i] );
-    }
-  }
+        var y = d3.scale.linear()
+            .range([groupHeight + gapBetweenGroups, 0]);
 
-  // Color scale
-  var color = d3.scale.category20();
-  var chartHeight = (barHeight * dataSet.length) + (gapBetweenGroups * labelsLength);
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .tickFormat('')
+            .tickSize(0)
+            .orient("left");
 
-  var x = d3.scale.linear()
-      .domain([0, d3.max(dataSet)])
-      .range([0, chartWidth]);
+        // Specify the chart area and dimensions
+        var chart = d3.select(".chart").append('svg')
+            .attr("viewBox", "10 60 " + totalChartWidth + " " + groupHeight)
+            .attr("preserveAspectRatio", "xMidYMid meet");
 
-  var y = d3.scale.linear()
-      .range([groupHeight + gapBetweenGroups, 0]);
+        // Create bars
+        var bar = chart.selectAll("g")
+            .data(dataSet)
+            .enter().append("g")
+            .attr("transform", function(d, i) {
+                return "translate(" + spaceForLabels + "," + (i * barHeight + gapBetweenGroups *
+                    (0.5 + Math.floor(i / seriesLength))) + ")";
+            });
 
-  var yAxis = d3.svg.axis()
-      .scale(y)
-      .tickFormat('')
-      .tickSize(0)
-      .orient("left");
+        // Create rectangles of the correct width
+        bar.append("rect")
+            .attr("fill", function(d, i) {
+                return color(i % seriesLength);
+            })
+            .attr("class", "bar")
+            .attr("width", x)
+            .attr("height", barHeight - 1);
 
-  // Specify the chart area and dimensions
-  var chart = d3.select(".chart").append('svg')
-      .attr("viewBox", "10 60 "+ totalChartWidth+ " "+groupHeight)
-      .attr("preserveAspectRatio", "xMidYMid meet");
+        // Add text label in bar
+        bar.append("text")
+            .attr("x", function(d) {
+                return x(d) - 10;
+            })
+            .attr("y", barHeight / 2)
+            .attr("fill", "red")
+            .attr("dy", ".35em")
+            .text(function(d) {
+                return d;
+            });
 
-  // Create bars
-  var bar = chart.selectAll("g")
-      .data(dataSet)
-      .enter().append("g")
-      .attr("transform", function(d, i) {
-        return "translate(" + spaceForLabels + "," + (i * barHeight + gapBetweenGroups *
-        (0.5 + Math.floor(i/seriesLength))) + ")";
-      });
+        // Draw labels
+        bar.append("text")
+            .attr("class", "label")
+            .attr("x", function(d) {
+                return -10;
+            })
+            .attr("y", groupHeight / 12)
+            .attr("dy", ".35em")
+            .text(function(d, i) {
+                if (i % seriesLength === 0)
+                    return demographic.labels[Math.floor(i / seriesLength)];
+                else
+                    return "";
+            });
 
-  // Create rectangles of the correct width
-  bar.append("rect")
-      .attr("fill", function(d,i) { return color(i % seriesLength); })
-      .attr("class", "bar")
-      .attr("width", x)
-      .attr("height", barHeight - 1 );
+        chart.append("g")
+            .attr("class", "y axis")
+            .attr("transform", "translate(" + spaceForLabels + ", " + -gapBetweenGroups / 2 + ")")
+            .call(yAxis);
 
-  // Add text label in bar
-  bar.append("text")
-      .attr("x", function(d) { return x(d) - 10; })
-      .attr("y", barHeight/2)
-      .attr("fill", "red")
-      .attr("dy", ".35em")
-      .text(function(d) { return d; });
+        // Draw legend
+        var legendRectSize = 26,
+            legendSpacing = 6;
 
-  // Draw labels
-  bar.append("text")
-      .attr("class", "label")
-      .attr("x", function(d) { return - 10; })
-      .attr("y", groupHeight/12)
-      .attr("dy", ".35em")
-      .text(function(d,i) {
-        if (i % seriesLength === 0)
-          return demographic.labels[Math.floor(i/seriesLength)];
-        else
-          return ""});
-
-  chart.append("g")
-        .attr("class", "y axis")
-        .attr("transform", "translate(" + spaceForLabels + ", " + -gapBetweenGroups/2 + ")")
-        .call(yAxis);
-
-  // Draw legend
-  var legendRectSize = 26,
-      legendSpacing  = 6;
-
-  var legend = chart.selectAll('.legend')
-      .data(demographic.series)
-      .enter()
-      .append('g')
-      .attr('transform', function (d, i) {
-          var height = legendRectSize + legendSpacing;
-          var offset = -gapBetweenGroups/2;
-          var horz = spaceForLabels + chartWidth + 40 - legendRectSize;
-          var vert = i * height - offset;
-          return 'translate(' + horz + ',' + vert + ')';
-      });
-
-  legend.append('rect')
-      .attr('width', legendRectSize)
-      .attr('height', legendRectSize)
-      .style('fill', function (d, i) { return color(i); })
-      .style('stroke', function (d, i) { return color(i); });
-
-  legend.append('text')
-      .attr('class', 'legend')
-      .attr('x', legendRectSize + legendSpacing)
-      .attr('y', legendRectSize - legendSpacing)
-      .text(function (d) { return d.label; });
-  });
+        var legend = chart.selectAll('.legend')
+            .data(demographic.series)
+            .enter()
+            .append('g')
+            .attr('transform', function(d, i) {
+                var height = legendRectSize + legendSpacing;
+                var offset = -gapBetweenGroups / 2;
+                var horz = spaceForLabels + chartWidth + 40 - legendRectSize;
+                var vert = i * height - offset;
+                return 'translate(' + horz + ',' + vert + ')';
+            });
+        //Appending bars to chart
+        legend.append('rect')
+            .attr('width', legendRectSize)
+            .attr('height', legendRectSize)
+            .style('fill', function(d, i) {
+                return color(i);
+            })
+            .style('stroke', function(d, i) {
+                return color(i);
+            });
+        //Appending text to chart
+        legend.append('text')
+            .attr('class', 'legend')
+            .attr('x', legendRectSize + legendSpacing)
+            .attr('y', legendRectSize - legendSpacing)
+            .text(function(d) {
+                return d.label;
+            });
+    });
 
 };
 

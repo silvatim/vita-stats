@@ -1,4 +1,3 @@
-
 body {
     background-color: rgba( 27, 31, 42, 1);
     font-family: 'Roboto', sans-serif;
@@ -6,16 +5,16 @@ body {
 }
 
 .panel {
-    background-color: rgba( 30, 80, 120, 0.3 );
+    background-color: rgba( 30, 80, 120, 0.3);
     border: 1px solid black;
     border-radius: 20px;
     box-shadow: 0px 0px 20px 0px #06060d;
 }
 
-h1{
+h1 {
     background-color: #29384D;
-    height:40px;
-    color:#929DAF;
+    height: 40px;
+    color: #929DAF;
     text-align: center;
     line-height: 45px;
     border-top-left-radius: 20px;
@@ -23,163 +22,161 @@ h1{
     font-weight: 200px;
     font-size: 2vw;
     text-shadow: 1px 1px #06060d;
-    margin-top:0px;
-    margin-bottom:10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
-p{
- font-size: 1.2vw;
- padding-left: 60px;
- padding-right: 60px;
+p {
+    font-size: 1.2vw;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
-.container{
-  width:100vw;
-  height: 95vh;
+.container {
+    width: 100vw;
+    height: 95vh;
 }
 
-.vitamin{
-  display: inline-block;
-  width: 55%;
-  height: 100%;
-  margin-left: 1%;
-  margin-top: 1%;
-  float: left;
+.vitamin {
+    display: inline-block;
+    width: 55%;
+    height: 100%;
+    margin-left: 1%;
+    margin-top: 1%;
+    float: left;
 }
 
-.structure{
-  border: 1px solid black;
-  width: 100%;
-  height: 60%;
-  margin-bottom: 1%;
+.structure {
+    border: 1px solid black;
+    width: 100%;
+    height: 60%;
+    margin-bottom: 1%;
 }
 
 .link line {
-  stroke:lightgray;
+    stroke: lightgray;
 }
 
 .link line.separator {
-  stroke: black;
-  stroke-width: 2px;
+    stroke: black;
+    stroke-width: 2px;
 }
 
 .node circle {
-  stroke: darkgray;
-  stroke-width: 1px;
+    stroke: darkgray;
+    stroke-width: 1px;
 }
 
 .node text {
-  font: 10px sans-serif;
-  pointer-events: none;
+    font: 10px sans-serif;
+    pointer-events: none;
 }
 
-.description{
-  width: 100%;
-  height: 33%;
-  margin-top: 3%;
+.description {
+    width: 100%;
+    height: 33%;
+    margin-top: 3%;
 }
 
-.graphs{
-  display: inline-block;
-  width: 38%;
-  height: 100%;
-  margin-top: 1%;
-  margin-left: 2%;
+.graphs {
+    display: inline-block;
+    width: 38%;
+    height: 100%;
+    margin-top: 1%;
+    margin-left: 2%;
 }
 
-.chart{
-  width: 100%;
-  height: 50%;
+.chart {
+    width: 100%;
+    height: 50%;
 }
 
-.donutandcontrols{
-  width: 100%;
-  height: 44%;
+.donutandcontrols {
+    width: 100%;
+    height: 44%;
 }
 
-.donutGraph{
-  display: inline-block;
-  width: 60%;
-  height: 100%;
-  margin-top:4%;
-  float: left;
+.donutGraph {
+    display: inline-block;
+    width: 60%;
+    height: 100%;
+    margin-top: 4%;
+    float: left;
 }
 
-.controls{
-  display:inline-block;
-  width: 35%;
-  height: 100%;
-  margin-top: 4%;
-  margin-left: 4%;
+.controls {
+    display: inline-block;
+    width: 35%;
+    height: 100%;
+    margin-top: 4%;
+    margin-left: 4%;
 }
 
 .chart .legend {
-  fill: #929DAF;
-  font: 14px sans-serif;
-  text-anchor: start;
-  font-size: 18px;
+    fill: #929DAF;
+    font: 14px sans-serif;
+    text-anchor: start;
+    font-size: 18px;
 }
 
 .chart text {
-  fill: white;
-  font: 18px sans-serif;
-  text-anchor: end;
+    fill: white;
+    font: 18px sans-serif;
+    text-anchor: end;
 }
 
 .chart .label {
-  fill: #929DAF;
-  font: 22px sans-serif;
-  font-weight: bold;
-  text-anchor: end;
+    fill: #929DAF;
+    font: 22px sans-serif;
+    font-weight: bold;
+    text-anchor: end;
 }
 
 .bar:hover {
-  fill: brown;
+    fill: brown;
 }
 
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
 }
 
-svg{
- width:100%;
- height:100%;
- display: block;
- margin: auto;
+svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
 }
 
 .shadow {
-    -webkit-filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.5) );
-    filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.5) );
+    -webkit-filter: drop-shadow( 0px 3px 3px rgba(0, 0, 0, .5));
+    filter: drop-shadow( 0px 3px 3px rgba(0, 0, 0, .5));
 }
 
 select {
-   -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-.controls p{
-  text-align: center;
-  padding-left: 0px;
-  padding-right: 0px;
+.controls p {
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 select {
-   margin: 10px;
-   border: 1px solid #111;
-   background: #929DAF;
-   background: url('../img/down_arrow_select.jpg') no-repeat right #ddd;
-   width: 120px;
-   padding: 5px 15px 5px 5px;
-   font-size: 16px;
-   border: 1px solid #ccc;
-   height: 34px;
-   -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
+    margin: 10px;
+    border: 1px solid #111;
+    background: #929DAF;
+    background: url('../img/down_arrow_select.jpg') no-repeat right #ddd;
+    width: 120px;
+    padding: 5px 15px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
-
