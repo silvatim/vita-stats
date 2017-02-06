@@ -11,8 +11,8 @@ var pie = d3.layout.pie()
   .sort(null)
   .padAngle(.03);
 
-var w=270;
-var h=270;
+var w=240;
+var h=240;
 
 var outerRadius = w/2 ;
 var innerRadius = 80;
